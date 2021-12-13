@@ -1,16 +1,38 @@
-<div>
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-container" style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});">
+    <h4>
+        <span>{{section.settings.rich_text}}</span>
+    </h4>
   <h1>
-    <img src={{ "" }} />
-    <span>Vintage & thrift</span>
+    <span>{{section.settings.big_text}}</span>
   </h1>
+  
 </div>
 
 {% schema %} 
 { 
     "name": "Hero", 
-    "presents": [ 
-    { 
-        "name": "Hero" } 
+    "settings": [
+      {
+          "type": "image_picker",
+          "id": "image_bg",
+          "label": "Background Image"
+      },
+      {
+            "type": "richtext",
+            "id": "rich_text",
+            "label":"Top Text"
+      },
+      {
+        "type": "richtext",
+        "id": "big_text",
+        "label":"Big Text"
+      }
+    ],
+    "presets": [ 
+      { "name": "Hero" } 
     ] 
+    
 } 
 {% endschema %}

@@ -1,4 +1,9 @@
+/*  custom font */
+
+
+
 /* Color custom properties */
+
 
 :root,
 .color-background-1 {
@@ -1864,6 +1869,7 @@ input[type='checkbox'] {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  
 }
 
 @media screen and (min-width: 990px) {
@@ -1886,8 +1892,8 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
+    grid-template-columns: 5fr 4fr 1fr;
+    /* column-gap: 2rem; */
   }
 
   .header--top-center {
