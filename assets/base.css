@@ -2336,3 +2336,7 @@ details-disclosure > details {
   }
 }
 
+/* What gives the waves for the wavySections overlap */
+div.wavySection {
+  margin-top: -100px;
+}

@@ -1,12 +1,14 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
 <div class="hero-container" style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});">
+  <div class="hero-text-container">
     <h4>
         <span>{{section.settings.rich_text}}</span>
     </h4>
   <h1>
     <span>{{section.settings.big_text}}</span>
   </h1>
+</div>
   
 </div>
 

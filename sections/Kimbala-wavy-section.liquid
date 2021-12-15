@@ -1,0 +1,98 @@
+{{ 'Kimbala-wavy-section.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
+
+<div class="wavySection">
+    <div>
+        <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+    </div>
+    <div class="wavyBody" style="background-color: {{section.settings.wavySectionColor}};">
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'product' -%}
+                
+                    <h2>{{block.settings.wavy_title}}</h2>
+                    <div class="WavyImgTextPair">
+                        <img src={{block.settings.side_img | img_url: 'large'}}>
+                        <div class="productText">
+                            <h2>{{block.settings.img_desc}}</h2>
+                            <button class="kimbalaButton">Buy it now</button>
+                        </div>
+                        
+                    </div>
+                
+                {%- when 'description' -%}
+                    <img src={{block.settings.side_img | img_url: 'large'}}>
+                    <div>
+                        Hello World
+                    </div>
+                
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Wavy Section",
+    "presets": [{
+            "name": "Wavy Section"
+        }],
+    "blocks": [
+    {
+            "type": "product",
+            "name": "Featured Product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "side_img",
+                    "label": "Side Image"
+                },
+                {
+                            
+                    "type": "richtext",
+                    "id": "wavy_title",
+                    "label": "Title"
+                                
+                },
+                {
+                    "type": "richtext",
+                    "id": "img_desc",
+                    "label": "Description"
+                }
+            ]
+
+        }, 
+        {
+            "type": "description",
+            "name": "Image and Text",
+            "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "side_img",
+                        "label": "Side Image"
+                    },
+                    {
+                                
+                        "type": "richtext",
+                        "id": "wavy_title",
+                        "label": "Title"
+                                    
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "img_desc",
+                        "label": "Description"
+                    }
+                ]
+            }
+        ],
+    "settings": [{
+                "type": "color",
+                "id": "wavySectionColor",
+                "label": "Color",
+                "default": "#ffcccc"
+        }]
+}
+{% endschema %}
