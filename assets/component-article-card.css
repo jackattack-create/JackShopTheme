@@ -28,6 +28,7 @@
   align-self: flex-start;
   flex: 0 1 100%;
   display: flex;
+  flex-direction: column-reverse;
   align-items: flex-start;
   height: 100%;
 }
@@ -47,7 +48,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   text-decoration: none;
   color: inherit;
 }
@@ -97,6 +98,9 @@
 
 .article-card__header h2 {
   margin: 0 0 0.6rem;
+  font-family: "Fira Sans";
+  font-style: italic;
+  font-weight: medium;
 }
 
 .article-card__header h2:only-child {

@@ -380,6 +380,7 @@
 .card-information__wrapper.collage-content__info {
   margin: 0;
   padding: 1.5rem 2rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 750px) {

@@ -3,6 +3,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
@@ -12,12 +13,12 @@
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
-  <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+  <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}" >
     {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
   </div>
 {%- endif -%}
 
-<div id="ProductGridContainer">
+<div id="ProductGridContainer" style="background-color: {{section.settings.back_color}};">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
       <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
@@ -49,6 +50,9 @@
                 show_image_outline: section.settings.show_image_outline,
                 show_rating: section.settings.show_rating
               %}
+              <button class="kimbalaButton">
+                <a href="{{ product.url }}">Buy now</a>
+              </button>
             </li>
           {%- endfor -%}
         </ul>

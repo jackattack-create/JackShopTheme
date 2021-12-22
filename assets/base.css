@@ -860,6 +860,7 @@ summary::-webkit-details-marker {
 
 .title--primary {
   margin: 4rem 0;
+  text-align: center;
 }
 
 .title-wrapper--self-padded-tablet-down,
@@ -1197,6 +1198,8 @@ deferred-media {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
+
+  border-radius: 5px;
 }
 
 .button:focus-visible {
@@ -2177,6 +2180,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+  justify-self: end;
 }
 
 .header--top-center .header__inline-menu,
@@ -2339,4 +2343,7 @@ details-disclosure > details {
 /* What gives the waves for the wavySections overlap */
 div.wavySection {
   margin-top: -100px;
+  z-index: 99;
 }
+
+

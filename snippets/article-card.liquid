@@ -13,6 +13,8 @@
     {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
 
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
+
 <article class="article-card{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}" aria-labelledby="Article-{{ article.id }}">
   <a href="{{ article.url }}" class="article-content motion-reduce">
     {%- if show_image == true and article.image -%}
@@ -66,6 +68,7 @@
           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
         {%- endif -%}
       </div>
+      <button style="width: 180px;" class="kimbalaButton">Read On >>></button>
     </div>
   </a>
 </article>
