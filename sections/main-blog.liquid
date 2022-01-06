@@ -11,7 +11,7 @@
     {%- if section.settings.blog_wave != true -%}
       <h1 class="title--primary">{{ blog.title | escape }}</h1>
     {%- else -%}
-        <div class="wavySection">
+        <div class="wavySection" style="margin-top: -100px;">
           <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.background_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
         </div>
     {%- endif -%}
