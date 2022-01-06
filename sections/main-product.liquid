@@ -386,10 +386,10 @@
     <div class="accordion__content rte">
       <div class="secondary-prod-info">
         <div>
-           <p> <b><i>Caffine:</i></b> {{section.settings.caffine}}</p>
+           <p> <b><i>Caffine:</i></b> {{product.metafields.my_fields.caffine}}</p>
         </div>
         <div>
-         <p> <b><i>Ingredients:</i></b>  {{section.settings.ingredients}}</p>
+         <p> <b><i>Ingredients:</i></b>  {{product.metafields.my_fields.ingredients}}</p>
         </div>
       </div>
       <div>
@@ -431,48 +431,7 @@
     </details>
   </div>
 
-  <div class="wavySection">
-        <div>
-            <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
-        </div>
-   
-  
-    <div class="wavyBody" style="background-color: {{section.settings.wavySectionColor}};">
-      {%- if product.metafields.reviews.rating.value != blank -%}
-      <div class="customer__reviews">
-        <div>
-          <h2>Customer Reviews</h2>
-        </div>
-          <div>
-              {% liquid
-               assign rating_decimal = 0
-               assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-               if decimal >= 0.3 and decimal <= 0.7
-                assign rating_decimal = 0.5
-              elsif decimal > 0.7
-                assign rating_decimal = 1
-               endif
-              %}
-              <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
-                <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
-              </div>
-              <p class="rating-text caption">
-                <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
-              </p>
-              <p class="rating-count caption">
-                <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
-              </p>
-            </div>
-          </div>
-          
-          {%- else -%}
-          <h2>No Reviews here</h2>
-          <h3>Be the first!</h3>
-        {%- endif -%}
-          
-    </div>
-  </div>
+
 
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
@@ -516,6 +475,48 @@
     </modal-dialog>
   {%- endfor -%}
 </section>
+
+<div class="wavySection">
+  <div>
+      <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+  </div>
+  
+  <div class="wavyBody" style="background-color: {{section.settings.wavySectionColor}};">
+    {%- if product.metafields.reviews.rating.value != blank -%}
+    <div class="customer__reviews">
+      <div>
+        <h2>Customer Reviews</h2>
+      </div>
+        <div>
+            {% liquid
+            assign rating_decimal = 0
+            assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+            if decimal >= 0.3 and decimal <= 0.7
+              assign rating_decimal = 0.5
+            elsif decimal > 0.7
+              assign rating_decimal = 1
+            endif
+            %}
+            <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+              <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
+            </div>
+            <p class="rating-text caption">
+              <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+            </p>
+            <p class="rating-count caption">
+              <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+              <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
+            </p>
+          </div>
+        </div>
+        
+        {%- else -%}
+        <h2>No Reviews here</h2>
+        <h3>Be the first!</h3>
+      {%- endif -%}
+        
+  </div>
+</div>
 
 {% javascript %}
   class ProductModal extends ModalDialog {

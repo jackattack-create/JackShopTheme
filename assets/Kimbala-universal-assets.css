@@ -6,6 +6,7 @@ button.kimbalaButton {
     padding:5px 25px;
 
     border-radius: 5px;
+    width: 15rem;
 }
 
 button.kimbalaButton a{

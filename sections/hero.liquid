@@ -1,14 +1,15 @@
+
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
 <div class="hero-container" style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});">
   <div class="hero-text-container">
     <h4>
-        <span>{{section.settings.rich_text}}</span>
+        {{section.settings.rich_text}}
     </h4>
-  <h1>
-    <span>{{section.settings.big_text}}</span>
-  </h1>
-</div>
+    <h1>
+      {{section.settings.big_text}}
+    </h1>
+  </div>
   
 </div>
 
@@ -22,12 +23,12 @@
           "label": "Background Image"
       },
       {
-            "type": "richtext",
+            "type": "text",
             "id": "rich_text",
             "label":"Top Text"
       },
       {
-        "type": "richtext",
+        "type": "text",
         "id": "big_text",
         "label":"Big Text"
       }

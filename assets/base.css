@@ -2181,6 +2181,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   grid-area: navigation;
   display: none;
   justify-self: end;
+  width:100%;
 }
 
 .header--top-center .header__inline-menu,

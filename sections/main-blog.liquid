@@ -1,14 +1,34 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'kimbala-blog.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-wavy-section.css' | asset_url | stylesheet_tag }}
 
 
 {%- paginate blog.articles by 6 -%}
 
-  <div class="main-blog page-width">
-    <h1 class="title--primary">{{ blog.title | escape }}</h1>
+  <div class="main-blog ">
+    {%- if section.settings.blog_wave != true -%}
+      <h1 class="title--primary">{{ blog.title | escape }}</h1>
+    {%- else -%}
+        <div class="wavySection">
+          <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.background_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+        </div>
+    {%- endif -%}
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    {%- if section.settings.featured_article != blank -%}
+      <div class="featured-article page-width">
+        <img src="{{section.settings.featured_article.image | img_url: 'large'}}">
+        <div class="featured-article__desc">
+          <h2>{{section.settings.featured_article.title}}</h2>
+          <p>{{section.settings.featured_article.excerpt}}</p>
+          <button class="kimbalaButton">
+            <a href="{{section.settings.featured_article.url}}">READ ON >>></a>
+          </button>
+        </div>
+      </div>
+    {%- endif -%}
+    <div class="blog-articles page-width {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
           {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
@@ -33,6 +53,20 @@
       "content": "t:sections.main-blog.settings.header.content"
     },
     {
+          "type": "checkbox",
+          "id": "blog_wave",
+          "label": "Wave",
+          "default": true
+    },
+    {
+     
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#fff"
+     
+    },
+    {
       "type": "select",
       "id": "layout",
       "options": [
@@ -47,6 +81,14 @@
       ],
       "default": "collage",
       "label": "t:sections.main-blog.settings.layout.label"
+    },
+    {
+ 
+          "type": "article",
+          "id": "featured_article",
+          "label": "Featured Article",
+          "info": "Featured Article"
+      
     },
     {
       "type": "checkbox",

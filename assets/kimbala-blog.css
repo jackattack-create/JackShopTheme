@@ -1,0 +1,25 @@
+.featured-article {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.featured-article img{
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.featured-article__desc {
+    margin: 50px auto;
+    width: 40%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-article__desc h2,
+.featured-article__desc p {
+    width: 80%;
+}

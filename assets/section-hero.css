@@ -11,12 +11,21 @@
 }
 
 .hero-text-container {
+  height: 240px;
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
 }
 
 .hero-container h4 {
+  margin:0;
   font-size: 24px;
+}
+
+.hero-container h1 {
+  margin:0;
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-style: italic;
 }

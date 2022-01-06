@@ -25,11 +25,10 @@
   display: none;
 }
 
-li  {
+ul.product-grid li.grid__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .card-information__wrapper {
@@ -41,17 +40,15 @@ li  {
 .grid__item h3 {
   font-family: "Ibm Plex Sans";
   text-align: center;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   padding-right: 0;
 }
 
-
-
 .card__inner {
-  margin-left:auto;
-  margin-right:auto;
-  width: 150px;
-  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  height: 25rem;
 }
 
 li button a {
@@ -62,6 +59,3 @@ li button a {
 .product-grid {
   padding-top: 50px;
 }
-
-
-

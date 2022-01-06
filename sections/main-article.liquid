@@ -1,4 +1,7 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-wavy-section.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
+{{ 'kimbala-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
@@ -31,6 +34,46 @@
             </div>
           </div>
         {%- endif -%}
+
+        {%- when 'Kimbala_blog_hero' -%}
+          <div class="hero-container" style="background-image: url({{ article.image | img_url: '1100x' }});">
+            <nav 
+              class="hero-nav"
+              {%-  if blog.previous_article == blank -%}
+                style="justify-content: flex-end;"
+              {%- endif -%}
+            >
+              
+              
+                    <a href="{{blog.previous_article}}">
+                      {%- unless blog.previous_article == blank -%}
+                        < PREVIOUS RECIPIE
+                      {%- endunless -%}
+                    </a>
+                  
+                  {%- unless blog.next_article == blank -%}
+                    <a href="{{blog.next_article}}">
+                      NEXT RECIPIE >
+                    </a>
+                  {%- endunless -%}
+            </nav>
+            <div class="hero-text-container">
+              <h2>{{article.title}}</h2>
+             
+            </div>
+          </div>
+          
+          <div class="wavySection">
+            <div>
+              <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{block.settings.blog_wave_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+            </div>
+            <div class="wavyBody" style="background-color: {{block.settings.blog_wave_color}};">
+              <p>
+                {{article.excerpt}}
+              </p>
+            </div>
+          </div>
+        
 
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
@@ -89,6 +132,33 @@
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           </div>
+
+          {%- when 'footer' -%}
+          <div class="footer-container">
+          
+            <div class="wavySection">
+              <div>
+                <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{block.settings.blog_wave_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+              </div>
+              <div class="wavyBody" style="background-color: {{block.settings.blog_wave_color}};">
+                <h2>Shop This Recipie</h2>
+                <nav class="blog-footer-nav">
+                  {%- unless blog.previous_article == blank -%}
+                    <a href="{{blog.previous_article}}">
+                      < PREVIOUS RECIPIE
+                    </a>
+                  {%- endunless -%}
+                  {%- unless blog.next_article == blank -%}
+                    <a href="{{blog.next_article}}">
+                      NEXT RECIPIE >
+                    </a>
+                  {%- endunless -%}
+                </nav>
+              </div>
+            </div>
+          </div>
+
+
     {%- endcase -%}
   {%- endfor -%}
 
@@ -368,6 +438,34 @@
         {
           "type": "paragraph",
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
+        }
+      ]
+    },
+    {
+      "type": "Kimbala_blog_hero",
+      "name": "Kimbala Blog Hero",
+      "settings": [
+        {
+          
+            "type": "color",
+            "id": "blog_wave_color",
+            "label": "Hero Color",
+            "default": "#fff"
+         
+        }
+      ]
+    },
+    {
+      "type": "footer",
+      "name": "Blog Footer",
+      "settings": [
+        {
+          
+            "type": "color",
+            "id": "blog_wave_color",
+            "label": "Footer Color",
+            "default": "#fff"
+         
         }
       ]
     }
