@@ -23,7 +23,7 @@
 
 .wavyWave {
   z-index: 3;
-  display: relative;
+  display: inline-block;
 }
 
 

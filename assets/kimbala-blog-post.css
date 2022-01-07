@@ -1,5 +1,10 @@
+section {
+    margin: 0;
+}
+
 .hero-container {
     padding-top: 0;
+    margin-top: 0;
 
     height: 60rem;
     background-repeat: no-repeat;
@@ -58,9 +63,33 @@
     padding-bottom: 100px;
 }
 
+.article-template > *:first-child:not(.article-template__hero-container) {
+    margin-top: 0;
+}
+
 @media (max-width: 780px) {
     .hero-nav,
     .blog-footer-nav {
         flex-direction: column;
+    }
+
+    .hero-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-position: bottom center;
+    }
+
+    .hero-text-container {
+        width: 100%;
+    }
+
+    .hero-nav,
+    .blog-footer-nav {
+        display:none;
+    }
+
+    .wavyBody p {
+        width:100%;
     }
 }
