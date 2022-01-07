@@ -7,53 +7,49 @@
 
 {%- paginate blog.articles by 6 -%}
 
-  <div class="main-blog"
-  {%- if section.settings.blog_wave == true -%}
-    style="margin-top: -100px;"
-  {%- endif -%}
-  >
-    {%- if section.settings.blog_wave != true -%}
-      <h1 class="title--primary">{{ blog.title | escape }}</h1>
-    {%- else -%}
-        <div class="wavySection">
-          <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.background_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+{%- if section.settings.blog_wave != true -%}
+  <h1 class="title--primary">{{ blog.title | escape }}</h1>
+{%- else -%}
+    <div class="wavySection" style="margin-top: -200px;">
+      <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.background_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+      {%- endif -%}
+  <div class="main-blog" style="padding-top: 100px; background-color: {{section.settings.background_color}};">
+          
+          {%- if section.settings.featured_article != blank -%}
+          <div class="featured-article page-width">
+            <img src="{{section.settings.featured_article.image | img_url: 'large'}}">
+            <div class="featured-article__desc">
+              <h2>{{section.settings.featured_article.title}}</h2>
+              <p>{{section.settings.featured_article.excerpt}}</p>
+              <button class="kimbalaButton">
+                <a href="{{section.settings.featured_article.url}}">READ ON >>></a>
+              </button>
+            </div>
+          </div>
+          {%- endif -%}
+          <div class="blog-articles page-width {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+            {%- for article in blog.articles -%}
+            <div class="blog-articles__article article">
+              {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+            </div>
+            {%- endfor -%}
+          </div>
+          
+          {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
         </div>
-    {%- endif -%}
-
-    {%- if section.settings.featured_article != blank -%}
-      <div class="featured-article page-width">
-        <img src="{{section.settings.featured_article.image | img_url: 'large'}}">
-        <div class="featured-article__desc">
-          <h2>{{section.settings.featured_article.title}}</h2>
-          <p>{{section.settings.featured_article.excerpt}}</p>
-          <button class="kimbalaButton">
-            <a href="{{section.settings.featured_article.url}}">READ ON >>></a>
-          </button>
-        </div>
+        {%- endpaginate -%}
+        
       </div>
-    {%- endif -%}
-    <div class="blog-articles page-width {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div class="blog-articles__article article">
-          {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
-        </div>
-      {%- endfor -%}
-    </div>
-
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  </div>
-{%- endpaginate -%}
-
-{% schema %}
-{
-  "name": "t:sections.main-blog.name",
-  "tag": "section",
-  "class": "spaced-section",
-  "settings": [
-    {
-      "type": "header",
+        {% schema %}
+        {
+          "name": "t:sections.main-blog.name",
+          "tag": "section",
+          "class": "spaced-section",
+          "settings": [
+          {
+            "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
     },
     {
