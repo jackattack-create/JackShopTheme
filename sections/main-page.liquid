@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 
+{{ 'Kimbala-wavy-section.css' | asset_url | stylesheet_tag }}
+
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
@@ -9,24 +11,25 @@
     {{ page.title | escape }}
   </h1>
 </div>
-  <div class="rte">
-    <div
-    {%- if section.settings.wavePageContent == true -%}
-      class="wavySection"
-      style="background-color: {{section.settings.wavySectionColor}};"
-    {%- endif -%}
-  >
-  {%- if section.settings.wavePageContent == true -%}
-        <div>
-          <svg class="wavyWave" style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
-      </div>
-    {%- endif -%}
+<div
+{%- if section.settings.wavePageContent == true -%}
+  class="wavySection"
+  style="background-color: {{section.settings.wavySectionColor}}; margin-top:-100px;"
+{%- endif -%}
+>
+{%- if section.settings.wavePageContent == true -%}
+      <div>
+        <svg class="wavyWave" style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+    </div>
+  {%- endif -%}
+<div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}};">
+  <div class="rte" style="background-color: {{section.settings.wavySectionColor}}; position:relative;">
       <div class="page-width page-width--narrow" style="background-color: {{section.settings.wavySectionColor}};">
       {{ page.content }}
       </div>
     </div>
   </div>
-
+</div>
 {% schema %}
 {
   "name": "t:sections.main-page.name",
