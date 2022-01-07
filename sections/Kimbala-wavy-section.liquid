@@ -63,6 +63,8 @@
                     {%- endfor -%}
                 </div>
                   
+                {%- when 'page' -%}
+                    <p>{{block.page.content}}</p>
                 
             {%- endcase -%}
         {%- endfor -%}
@@ -149,6 +151,20 @@
                         "type": "blog",
                         "id": "wavy_blog",
                         "label": "Blog"
+                    }
+                ]
+                
+            },
+            {
+                "type": "page",
+                "name": "Page content",
+                "settings": [
+                    {
+                        "type": "page",
+                        "id": "wavy_page",
+                        "label": "Page Content"
+                        
+                        
                     }
                 ]
                 

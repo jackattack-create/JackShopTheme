@@ -8,15 +8,44 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte">
-    {{ page.content }}
-  </div>
 </div>
+  <div class="rte">
+    <div
+    {%- if section.settings.wavePageContent == true -%}
+      class="wavySection"
+      style="background-color: {{section.settings.wavySectionColor}};"
+    {%- endif -%}
+  >
+  {%- if section.settings.wavePageContent == true -%}
+        <div>
+          <svg class="wavyWave" style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+      </div>
+    {%- endif -%}
+      <div class="page-width page-width--narrow" style="background-color: {{section.settings.wavySectionColor}};">
+      {{ page.content }}
+      </div>
+    </div>
+  </div>
 
 {% schema %}
 {
   "name": "t:sections.main-page.name",
   "tag": "section",
-  "class": "spaced-section"
+  "class": "spaced-section",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "wavePageContent",
+        "label": "Wave Content",
+        "default": false
+      
+    },
+    {
+      "type": "color",
+      "id": "wavySectionColor",
+      "label": "Color",
+      "default": "#ffcccc"
+    }
+  ]
 }
 {% endschema %}

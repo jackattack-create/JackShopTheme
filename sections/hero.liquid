@@ -6,20 +6,20 @@
   {%- case block.type -%}
   {%- when 'heading' -%}
         <div class="hero-text-container">
-      <h4>
+        <h4 style="color: {{block.settings.header_color_id}}">
         {{block.settings.rich_text}}
       </h4>
-      <h1>
+      <h1 style="color: {{block.settings.header_color_id}}">
         {{block.settings.big_text}}
       </h1>
     </div>
       
       {%- when 'text' -%}
-              <div style="width:100%; flex-direction: row; justify-content: start;">
+              <div style="width:100%; flex-direction: row; justify-content: start; ">
   
-                <div style="width: 50%; text-align: start; padding-left: 30px;">
-                <h2 style="color: {{block.settings.hero_side_text_color_id}}"><b><i>{{block.settings.hero_img_header}}</i></b></h2>
-                  <p style="color: {{block.settings.hero_side_text_color_id}}">
+                <div style="width: 50%; text-align: start; padding-left: 30px; ">
+                  <b><i><h2 style="color: {{block.settings.text_color_id}}; padding-top:100px;">{{block.settings.hero_img_header}}</h2></i></b>
+                  <p style="color: {{block.settings.text_color_id}}; ">
                     {{block.settings.hero_img_text}}
                   </p>
                 </div>
@@ -32,69 +32,69 @@
 { 
     "name": "Hero", 
     "settings": [
-      {
-          "type": "image_picker",
-          "id": "image_bg",
-          "label": "Background Image"
-      }
+        {
+            "type": "image_picker",
+            "id": "image_bg",
+            "label": "Background Image"
+        }
       ],
       "presets": [ 
-      { "name": "Hero" } 
+           { "name": "Hero" } 
       ],
       "blocks": [
-      {
-        "type": "heading",
-        "name": "Heading",
-        "settings": [
-                        {
-                              "type": "text",
-                              "id": "rich_text",
-                              "label":"Top Text"
-                        },
-                        {
-                          "type": "text",
-                          "id": "big_text",
-                          "label":"Big Text"
-                        },
-                        {
-                      
-                            "type": "color",
-                            "id": "hero_side_text_color_id",
-                            "label": "Text Color",
-                            "default": "#333"
-                          
-                        }
-      
-      ]
-    },
-      {
-        "type": "text",
-        "name": "Sided Text",
-        "settings": [
-          {
-            
-              "type": "checkbox",
-              "id": "rightText",
-              "label": "Right sided text",
-              "default": false
-            
-          },
-          {
-            
-            "type": "text",
-            "id": "hero_img_header",
-            "label": "Header"
+        {
+          "type": "heading",
+          "name": "Heading",
+          "settings": [
           
-        },
-          {
-            
-              "type": "text",
-              "id": "hero_img_text",
-              "label": "Text"
-            
-          }
+                          {
+                                "type": "text",
+                                "id": "rich_text",
+                                "label":"Top Text"
+                          },
+                          {
+                            "type": "text",
+                            "id": "big_text",
+                            "label":"Big Text"
+                          },
+                          {
+                            "type": "color",
+                            "id": "header_color_id",
+                            "label": "Text Color",
+                            "default": "#333333"
+                          
+                          }
+        
+        
         ]
-      }
+        },
+        {
+          "type": "text",
+          "name": "Sided Text",
+          "settings": [
+            {
+              
+              "type": "text",
+              "id": "hero_img_header",
+              "label": "Header"
+            
+            },
+            {
+              
+                "type": "text",
+                "id": "hero_img_text",
+                "label": "Text"
+              
+            },
+            {
+              "type": "color",
+              "id": "text_color_id",
+              "label": "Text Color",
+              "default": "#333333"
+            
+            }
+          ]
+        }
     ] 
     
 } 
