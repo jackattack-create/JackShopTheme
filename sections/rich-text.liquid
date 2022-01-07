@@ -4,7 +4,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+<div class="possiblePadding {% unless section.settings.full_width %}page-width{% endunless %}">
   <div class="rich-text color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width{% endif %}">
     <div class="rich-text__blocks">
       {%- for block in section.blocks -%}
@@ -17,6 +17,13 @@
             <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
               {{ block.settings.button_label | escape }}
             </a>
+            {%- when 'placeholder' -%}
+              <style>
+                .possiblePadding {
+                  padding-bottom: 100px;
+                }
+              </style>
+            
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -96,7 +103,12 @@
           "default": "h1",
           "label": "t:sections.rich-text.blocks.heading.settings.heading_size.label"
         }
+        
       ]
+    },
+    {
+      "type": "placeholder",
+      "name": "Wave Padding"
     },
     {
       "type": "text",

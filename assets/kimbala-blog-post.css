@@ -58,3 +58,9 @@
     padding-bottom: 100px;
 }
 
+@media (max-width: 780px) {
+    .hero-nav,
+    .blog-footer-nav {
+        flex-direction: column;
+    }
+}

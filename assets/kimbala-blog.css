@@ -23,3 +23,14 @@
 .featured-article__desc p {
     width: 80%;
 }
+
+@media (max-width: 780px) {
+    .featured-article {
+        flex-direction: column;
+    }
+
+    .featured-article img, 
+    .featured-article__desc {
+        width: 100%;
+    }
+}

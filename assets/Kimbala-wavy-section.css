@@ -81,6 +81,7 @@
 }
 
 .wavy-blog {
+  margin-top: 20px;
   width: 250px;
 }
 
@@ -103,4 +104,24 @@
 .title {
   width: 100%;
 
+}
+
+@media (max-width: 780px) {
+  .WavyImgTextPair,
+  .fullWavyImgTextPair, 
+  .wavy-blog-container {
+    flex-direction: column;
+  }
+
+  .wavy-blog {
+    width:100%;
+  }
+
+  .img-textBlock {
+    width:100%;
+  }
+
+  .wavy-blog img {
+    width:100%;
+  }
 }

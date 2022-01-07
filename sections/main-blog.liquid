@@ -20,14 +20,14 @@
             <img src="{{section.settings.featured_article.image | img_url: 'large'}}">
             <div class="featured-article__desc">
               <h2>{{section.settings.featured_article.title}}</h2>
-              <p>{{section.settings.featured_article.excerpt}}</p>
+              <p>{{section.settings.featured_article.excerpt | truncate: 240}}</p>
               <button class="kimbalaButton">
                 <a href="{{section.settings.featured_article.url}}">READ ON >>></a>
               </button>
             </div>
           </div>
           {%- endif -%}
-          <div class="blog-articles page-width {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+          <div style="padding-top:30px;" class="blog-articles page-width {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
             {%- for article in blog.articles -%}
             <div class="blog-articles__article article">
               {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
