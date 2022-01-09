@@ -1978,7 +1978,9 @@ input[type='checkbox'] {
 .header__icons {
   display: flex;
   grid-area: icons;
-  justify-self: end;
+  justify-content: space-between;
+  width: 2fr;
+  /* justify-self: end; */
 }
 
 .header__icon:not(.header__icon--summary),
@@ -2342,12 +2344,6 @@ details-disclosure > details {
 }
 
 /* What gives the waves for the wavySections overlap */
-div.wavySection {
-  z-index: 99;
-}
 
-div.wavy-body{
-  z-index: 98;
-}
 
 

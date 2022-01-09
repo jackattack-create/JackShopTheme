@@ -29,3 +29,18 @@
   font-weight: 400;
   font-style: italic;
 }
+
+.hero-side-text {
+  width: 50%; 
+  text-align: start; 
+  padding: 30px;
+}
+
+@media (max-width: 780px) {
+  
+
+  .hero-side-text {
+    width: 100%;
+  
+  }
+}

@@ -23,7 +23,12 @@
             {%- case block.type -%}
 
                 {%- when 'header' -%}
-                    <h2 class="title">{{block.settings.section_title}}</h2>
+                    <i><h2 class="wavyTitle" style="color: {{block.settings.header_text_color}}">{{block.settings.section_title}}</h2></i>
+
+                {%- when 'copy' -%}  
+                    <p class="single-copy page-width page-width--narrow">
+                        {{block.settings.wavy_content_richtext}}
+                    </p>  
                     
                 
                 {%- when 'description' -%}
@@ -36,7 +41,6 @@
                     </div>
                 {%- when 'productLink' -%}
                     <div >
-                        <h2>{{ block.settings.wavy_title }}</h2>
                         <div class="WavyImgTextPair">
                             <img src={{block.settings.product.images[0].src | img_url: 'large'}}>
                             <div class="img-textBlock">
@@ -48,6 +52,7 @@
                             
                         </div>
                     </div>
+
                 {%- when 'blog' -%}
                 <div class="wavy-blog-container"> 
                     {%- for article in block.settings.wavy_blog.articles -%}
@@ -72,7 +77,7 @@
     </div>
     {%- if section.settings.bottomWave -%}   
         <div>
-            <svg style="display:block; position:absolute; " class="wavyWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 148.18"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,0V96.32s-510.38-113.69-968.14,0C482,213,0,96.32,0,96.32V0Z"/></g></g></svg>
+            <svg style="display:block; " class="wavyWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 148.18"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,0V96.32s-510.38-113.69-968.14,0C482,213,0,96.32,0,96.32V0Z"/></g></g></svg>
         </div>
     {%- endif -%}
     
@@ -98,9 +103,30 @@
                     "id": "section_title",
                     "label": "Title",
                     "default": "Title"
+                },
+                {
+                    
+                        "type": "color",
+                        "id": "header_text_color",
+                        "label": "Text Color",
+                        "default": "#333"
+                   
                 }
             ]
        
+        },
+        {
+            "type": "copy",
+            "name": "Body Copy",
+            "settings": [
+                {
+                    
+                        "type": "richtext",
+                        "id": "wavy_content_richtext",
+                        "label": "Body"
+                    
+                }
+            ]
         },
         {
             "type": "description",
@@ -110,13 +136,6 @@
                         "type": "image_picker",
                         "id": "side_img",
                         "label": "Side Image"
-                    },
-                    {
-                                
-                        "type": "text",
-                        "id": "wavy_title",
-                        "label": "Title"
-                                    
                     },
                     {
                         "type": "text",
