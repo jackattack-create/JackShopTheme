@@ -23,3 +23,18 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+.pageSubTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.rte table {
+  box-shadow: none;
+  border:none;
+}
+
+.rte table td {
+  box-shadow: none;
+  border:none;
+}

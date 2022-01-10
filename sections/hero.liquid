@@ -15,10 +15,25 @@
     </div>
       
       {%- when 'text' -%}
-              <div style="width:100%; flex-direction: row; justify-content: start; ">
+              <div 
+              style="
+              width:100%; 
+              display: flex;
+              
+                {%- if block.settings.textSide == 'left' -%}
+                        justify-content: start; 
+                {%- elsif block.settings.textSide == 'right' -%} 
+                        justify-content: flex-end; 
+                {%- endif -%} 
+              ">
   
-                <div class="hero-side-text">
-                  <b><i><h2 style="color: {{block.settings.text_color_id}}; padding-top:100px;">{{block.settings.hero_img_header}}</h2></i></b>
+                <div class="hero-side-text" >
+                
+                  {%- if block.settings.titleType == 'large' -%}
+                  <b><h1 style="color: {{block.settings.text_color_id}}; max-width:400px;"><i>{{block.settings.hero_img_header}}</i></h1></b>
+                  {%- elsif block.settings.titleType == 'medium' -%} 
+                  <b><h2 style="color: {{block.settings.text_color_id}}; max-width:240px;"><i>{{block.settings.hero_img_header}}</i></h2></b>
+                  {%- endif -%} 
                   <p style="color: {{block.settings.text_color_id}}; ">
                     {{block.settings.hero_img_text}}
                   </p>
@@ -66,7 +81,7 @@
                           }
         
         
-        ]
+          ]
         },
         {
           "type": "text",
@@ -78,6 +93,37 @@
               "id": "hero_img_header",
               "label": "Header"
             
+            },
+            {
+             
+              "type": "select",
+              "id": "textSide",
+              "label": "Content Side",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                }
+                ]
+            },
+            {
+                    "type": "select",
+                  "id": "titleType",
+                  "label": "Title Size",
+                  "options": [
+                    {
+                      "value": "large",
+                      "label": "Large"
+                    },
+                    {
+                      "value": "medium",
+                      "label": "Medium"
+                    }
+                  ]
             },
             {
               

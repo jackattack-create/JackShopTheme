@@ -33,7 +33,7 @@
 .hero-side-text {
   width: 50%; 
   text-align: start; 
-  padding: 30px;
+  padding: 50px;
 }
 
 @media (max-width: 780px) {
@@ -41,6 +41,6 @@
 
   .hero-side-text {
     width: 100%;
-  
+    text-align: center;
   }
 }

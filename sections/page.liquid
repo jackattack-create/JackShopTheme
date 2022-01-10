@@ -14,6 +14,9 @@
       Page title
     {%- endif -%}
   </h2>
+  {%- if section.settings.pageSubTitle != blank -%}
+    <h3>{{section.settings.pageSubTitle}}</h3>
+  {%-  endif  -%}
   <div class="rte">
   <div
     {%- if section.settings.wavePageContent == true -%}
@@ -53,6 +56,13 @@
         "label": "Wave Content",
         "default": false
       
+    },
+    {
+      
+        "type": "text",
+        "id": "pageSubTitle",
+        "label": "Sub Title"
+     
     }
   ],
   "presets": [

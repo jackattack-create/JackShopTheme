@@ -27,7 +27,7 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
-        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet grid--5-col {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
@@ -40,7 +40,6 @@
                     {{ block.settings.subtext }}
                   </div>
                 {%- when 'link_list' -%}
-                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li>
@@ -50,7 +49,7 @@
                         </li>
                       {%- endfor -%}
                     </ul>
-                  {%- endif -%}
+                  
                 {%- when 'image' -%}
                   <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                     {%- if block.settings.image != blank -%}
@@ -68,6 +67,83 @@
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
                   </div>
+
+                  {%- when 'social_media' -%}
+                  <ul class="footer__list-social list-unstyled list-social" role="list" style="align-items: center;">
+                    <h5>FALLOW US</h5>
+                      {%- if settings.social_twitter_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                            {%- render 'icon-twitter' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_facebook_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                            {%- render 'icon-facebook' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_pinterest_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                            {%- render 'icon-pinterest' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_instagram_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                            {%- render 'icon-instagram' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_tiktok_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                            {%- render 'icon-tiktok' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_tumblr_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                            {%- render 'icon-tumblr' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_snapchat_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                            {%- render 'icon-snapchat' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_youtube_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                            {%- render 'icon-youtube' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_vimeo_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                            {%- render 'icon-vimeo' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                    </ul>
                 {%- endcase -%}
             </div>
           {%- endfor -%}
@@ -122,82 +198,8 @@
           </div>
         {%- endif -%}
 
-        {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social" role="list">
-            {%- if settings.social_twitter_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
-                  {%- render 'icon-twitter' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_facebook_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
-                  {%- render 'icon-facebook' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_pinterest_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
-                  {%- render 'icon-pinterest' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_instagram_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
-                  {%- render 'icon-instagram' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_tiktok_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
-                  {%- render 'icon-tiktok' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_tumblr_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
-                  {%- render 'icon-tumblr' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_snapchat_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
-                  {%- render 'icon-snapchat' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_youtube_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
-                  {%- render 'icon-youtube' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_vimeo_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
-                  {%- render 'icon-vimeo' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-          </ul>
-        {%- endif -%}
+      
+        
       </div>
     </div>
   {%- endif -%}
@@ -387,6 +389,10 @@
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
         }
       ]
+    },
+    {
+      "type": "social_media",
+      "name": "Social Media"
     },
     {
       "type": "text",
