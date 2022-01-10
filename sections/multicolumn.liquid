@@ -2,18 +2,33 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div class="page-width">
+<div
+{%- if section.settings.wavePageContent == true -%}
+class="wavySection"
+style="background-color: {{section.settings.wavySectionColor}};"
+{%- endif -%}
+>
+{%- if section.settings.wavePageContent == true -%}
+    <div>
+      <svg class="wavyWave" style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+  </div>
+  <div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}};">
+{%- endif -%}
+<div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}" style="background-color: {{section.settings.wavySectionColor}};">
+  <div class="page-width" >
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
-      <h2 class="title">
-        {{ section.settings.title | escape }}
+      <h2 class="title" style="margin-right:auto; margin-left: auto;">
+      <i> {{ section.settings.title | escape }} </i> 
       </h2>
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
-        <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
+      <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
       {%- endif -%}
     </div>
+              <h4 style="text-align: center; margin:0 0 50px 0;">
+                {{ section.settings.subTitle | escape }}
+              </h4>
     <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 and section.settings.image_width == 'full' %} grid--2-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
+      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 and section.settings.image_width == 'full' %} grid--4-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -27,7 +42,7 @@
         -%}
         {%- for block in section.blocks -%}
           <li class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <div class="multicolumn-card">
+            <div class="multicolumn-card" style="margin-bottom: 10px; height: auto;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -92,6 +107,10 @@
       {%- endif-%}
     </div>
   </div>
+  {%- if section.settings.wavePageContent == true -%}
+    </div>
+  {%- endif -%}
+</div>
 </div>
 
 {% schema %}
@@ -105,6 +124,12 @@
       "id": "title",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "default": "Multicolumn",
+      "label": "subtile"
     },
     {
       "type": "select",
@@ -202,7 +227,20 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "t:sections.multicolumn.settings.swipe_on_mobile.label"
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "wavePageContent",
+      "label": "Wave Content",
+      "default": false
+    
+  },
+  {
+    "type": "color",
+    "id": "wavySectionColor",
+    "label": "Color",
+    "default": "#ffcccc"
+  }
   ],
   "blocks": [
     {
