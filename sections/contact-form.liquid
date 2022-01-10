@@ -1,5 +1,13 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
+<style>
+  input {
+    background-color: #fff;
+    border-radius: 5px;
+    width:100%;
+  }
+</style>
+
 <div class="contact page-width page-width--narrow spaced-section">
   <h2 class="title">{{ section.settings.heading | escape }}</h2>
   {%- form 'contact', id: 'ContactForm' -%}
@@ -38,6 +46,7 @@
             aria-describedby="ContactForm-email-error"
           {% endif %}
           placeholder="{{ 'templates.contact.form.email' | t }}"
+          
         >
         <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
         {%- if form.errors contains 'email' -%}
