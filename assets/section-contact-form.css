@@ -7,7 +7,7 @@
 }
 
 .contact .icon-success {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .contact .field {
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 750px) {
   .contact .field {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -27,7 +27,7 @@
 .contact__fields input,
 .field input,
 .field__input {
-    
+  width:100%;
   background-color: #fff;
   border-radius: 5px;
   border: none;
@@ -57,4 +57,17 @@ input {
 
 .grecaptcha-badge {
   visibility: hidden;
+}
+
+.field {
+  flex-direction: column;
+}
+
+.field h4 {
+  color: #111;
+  margin: 10px 0;
+}
+
+div.contact__button {
+  text-align: center;
 }
