@@ -5,7 +5,7 @@
 <div
 {%- if section.settings.wavePageContent == true -%}
 class="wavySection"
-style="background-color: {{section.settings.wavySectionColor}};"
+style="background-color: {{section.settings.wavySectionColor}}; margin-top: -100px; position: relative;"
 {%- endif -%}
 >
 {%- if section.settings.wavePageContent == true -%}
@@ -16,9 +16,9 @@ style="background-color: {{section.settings.wavySectionColor}};"
 {%- endif -%}
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}" style="background-color: {{section.settings.wavySectionColor}};">
   <div 
-  {%- if section.settings.wavePageContent == false -%}
+ 
     class="page-width" 
-  {%- endif -%}
+ 
   >
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
       <h2 class="title" style="margin-right:auto; margin-left: auto;">
@@ -35,6 +35,7 @@ style="background-color: {{section.settings.wavySectionColor}};"
       <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 and section.settings.image_width == 'full' %} grid--4-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
+        style="justify-content: center;"
       >
         {%- liquid
           assign highest_ratio = 0
