@@ -8,6 +8,16 @@ button.kimbalaButton {
     border-radius: 5px;
     width: 15rem;
 }
+input.kimbalaButton {
+    border: none;
+    background-color: #000;
+
+    color: #fff;
+    padding:5px 25px;
+
+    border-radius: 5px;
+    width: 15rem;
+}
 
 button.kimbalaButton a{
     text-decoration: none;

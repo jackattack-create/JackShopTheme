@@ -1,6 +1,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -38,6 +39,10 @@
             show_image_outline: section.settings.show_image_outline,
             show_rating: section.settings.show_rating
           %}
+          <form class="kimbalaButton"  method="post" action="/cart/add">
+            <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+          <input class="kimbalaButton" name="add" value="ADD TO CART" type="submit" style="background-color:{{section.settings.button_color}}; color: {{section.settings.button_text_color}} "/>
+          </form>
         </li>
       {%- else -%}
         {%- for i in (1..4) -%}
@@ -165,6 +170,22 @@
       "default": false,
       "label": "t:sections.featured-collection.settings.show_rating.label",
       "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Color",
+        "default": "#fff"
+      
+    },
+    {
+      
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#111"
+    
     }
   ],
   "presets": [

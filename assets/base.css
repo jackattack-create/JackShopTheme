@@ -950,8 +950,8 @@ summary::-webkit-details-marker {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   width: calc(25% - 0.5rem * 3 / 4);
-  max-width: 50%;
-  flex-grow: 1;
+  /* max-width: 50%; */
+  /* flex-grow: 1; */
   flex-shrink: 0;
 }
 
@@ -1872,6 +1872,7 @@ input[type='checkbox'] {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  z-index: 5;
   
 }
 
@@ -1895,7 +1896,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: 5fr 4fr 1fr;
+    grid-template-columns: 5fr 3fr 2fr;
     /* column-gap: 2rem; */
   }
 
@@ -1978,7 +1979,7 @@ input[type='checkbox'] {
 .header__icons {
   display: flex;
   grid-area: icons;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 2fr;
   /* justify-self: end; */
 }

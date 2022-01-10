@@ -18,7 +18,7 @@
         </div>
    {%- endif -%}
   
-    <div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}}; color: {{section.settings.wavySectionTextColor}} margin-bottom: -100px;">
+    <div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}}; color: {{section.settings.wavySectionTextColor}};">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
 
@@ -70,6 +70,20 @@
                   
                 {%- when 'page' -%}
                     <p>{{block.page.content}}</p>
+
+                {%- when 'article' -%} 
+                
+                    <div class="fullWavyImgTextPair" style="height: 100%;">
+                        <img src={{block.settings.wavy_article.image.src | img_url: 'large'}} />
+                        <div class="img-textBlock">
+                            <h2>{{block.settings.wavy_article.title}}</h2>
+                            <p>{{block.settings.wavy_article.excerpt}}</p>
+                            <button class="kimbalaButton" >
+                               <a href="{{block.settings.wavy_article.url}}"> READ ON >>> </a>
+                            </button>
+                        </div>
+                    </div>
+                
                 
             {%- endcase -%}
         {%- endfor -%}
@@ -173,6 +187,18 @@
                     }
                 ]
                 
+            },
+            {
+                "type": "article",
+                "name": "Featured Article",
+                "settings": [
+                    {
+                        
+                        "type": "article",
+                        "id": "wavy_article",
+                        "label": "Featured Article"
+                    }
+                ]
             },
             {
                 "type": "page",
