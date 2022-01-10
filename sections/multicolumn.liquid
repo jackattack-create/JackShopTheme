@@ -15,7 +15,11 @@ style="background-color: {{section.settings.wavySectionColor}};"
   <div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}};">
 {%- endif -%}
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}" style="background-color: {{section.settings.wavySectionColor}};">
-  <div class="page-width" >
+  <div 
+  {%- if section.settings.wavePageContent != true -%}
+    class="page-width" 
+  {%- endif -%}
+  >
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
       <h2 class="title" style="margin-right:auto; margin-left: auto;">
       <i> {{ section.settings.title | escape }} </i> 
