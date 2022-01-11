@@ -3,9 +3,9 @@
 
 <div class="hero-container" 
 style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
-  {%- if background_image_style == 'fill' -%}
+  {%- if section.settings.background_image_style == 'fill' -%}
     background-size:fill;
-  {%- elsif background_image_style == 'cover' -%}
+  {%- elsif section.settings.background_image_style == 'cover' -%}
     background-size:cover;
   {%- endif -%}
 ">
