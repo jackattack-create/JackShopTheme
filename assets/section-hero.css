@@ -18,6 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width:640px;
 }
 
 .hero-container h4 {

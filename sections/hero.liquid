@@ -1,7 +1,14 @@
 
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
-<div class="hero-container" style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});">
+<div class="hero-container" 
+style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+  {%- if background_image_style == 'fill' -%}
+    background-size:fill;
+  {%- elsif background_image_style == 'cover' -%}
+    background-size:cover;
+  {%- endif -%}
+">
   {%- for block in section.blocks -%}
   {%- case block.type -%}
   {%- when 'heading' -%}
@@ -51,6 +58,19 @@
             "type": "image_picker",
             "id": "image_bg",
             "label": "Background Image"
+        }, 
+        {
+          
+            "type": "select",
+            "id": "background_img_style",
+            "label": "Background style",
+            "options": [
+              {
+                "value": "fill",
+                "label": "Fill"
+              }
+            ]
+          
         }
       ],
       "presets": [ 
