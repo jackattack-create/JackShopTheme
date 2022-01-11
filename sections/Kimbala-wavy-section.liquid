@@ -62,7 +62,7 @@
                             <a href="{{article.url}}">
                                 <img src="{{article.image.src | img_url: 'medium'}}" />
                             </a>
-                                <h3><i>{{article.title}}</i></h3>
+                        <i><h3 style="color: {{section.settings.wavySectionTextColor}};">{{article.title}}</h3></i>
                                 <p>{{article.excerpt | truncate: 180}}</p>
                         </div>
                     
@@ -77,8 +77,8 @@
                     <div class="fullWavyImgTextPair" style="height: 100%;">
                         <img src={{block.settings.wavy_article.image.src | img_url: 'large'}} />
                         <div class="img-textBlock">
-                            <h2 style="color: {{section.settings.wavySectionTextColor}};">{{block.settings.wavy_article.title}}</h2>
-                            <p>{{block.settings.wavy_article.excerpt}}</p>
+                            <h2>{{block.settings.wavy_article.title}}</h2>
+                            <p>{{block.settings.wavy_article.excerpt | truncate: 180}}</p>
                             <button class="kimbalaButton" >
                                <a href="{{block.settings.wavy_article.url}}"> READ ON >>> </a>
                             </button>

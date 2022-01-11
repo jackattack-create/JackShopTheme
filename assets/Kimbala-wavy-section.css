@@ -85,7 +85,7 @@
 
 .wavy-blog {
   margin-top: 20px;
-  width: 250px;
+  max-width: 250px;
 }
 
 .wavy-blog img {
@@ -126,6 +126,7 @@
 
   .wavy-blog {
     width:100%;
+    flex-wrap: wrap;
   }
 
   .img-textBlock {
