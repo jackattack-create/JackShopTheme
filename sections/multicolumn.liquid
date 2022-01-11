@@ -10,7 +10,7 @@
 {%- endif -%}
 <div class="multicolumn 
     
-      background-{{ section.settings.background_style }}
+    background-{{ section.settings.background_style }}
     
     {% if section.settings.title == blank %} no-heading{% endif %}
   " 
@@ -101,7 +101,7 @@
         -%}
         {%- for block in section.blocks -%}
           <li class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <div class="multicolumn-card" style="margin-bottom: 10px;">
+            <div class="multicolumn-card" style="margin-bottom: 10px; margin-top:0;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
