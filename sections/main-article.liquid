@@ -47,13 +47,13 @@
               
                     <a href="{{blog.previous_article}}">
                       {%- unless blog.previous_article == blank -%}
-                        < PREVIOUS RECIPIE
+                        < PREVIOUS ARTICLE
                       {%- endunless -%}
                     </a>
                   
                   {%- unless blog.next_article == blank -%}
                     <a href="{{blog.next_article}}">
-                      NEXT RECIPIE >
+                      NEXT ARTICLE >
                     </a>
                   {%- endunless -%}
             </nav>
@@ -150,12 +150,12 @@
                 <nav class="blog-footer-nav">
                   {%- unless blog.previous_article == blank -%}
                     <a href="{{blog.previous_article}}">
-                      < PREVIOUS RECIPIE
+                      < PREVIOUS ARTICLE
                     </a>
                   {%- endunless -%}
                   {%- unless blog.next_article == blank -%}
                     <a href="{{blog.next_article}}">
-                      NEXT RECIPIE >
+                      NEXT ARTICLE >
                     </a>
                   {%- endunless -%}
                 </nav>
@@ -167,12 +167,7 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="element-margin center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-    </a>
-  </div>
+  
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
@@ -401,6 +396,7 @@
         }
       ]
     },
+    
     {
       "type": "title",
       "name": "t:sections.main-article.blocks.title.name",
