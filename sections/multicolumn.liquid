@@ -21,8 +21,7 @@
     background-repeat: no-repeat;
     background-color: none;
     background-position:center;
-    width: 100%;
-    height: 100%;
+    object-fit:fill;
   {%- else -%}
     background-color: {{section.settings.wavySectionColor}};
   {%- endif -%}
@@ -112,6 +111,7 @@
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}>
+                    <a href="{{block.settings.link.src}}">
                     <img
                       srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
                         {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
@@ -126,8 +126,9 @@
                       height="{{ block.settings.image.height }}"
                       width="{{ block.settings.image.width }}"
                       loading="lazy"
-                      href="{{block.settings.link.src}}"
+                      
                     >
+                    </a>
                   </div>
                 </div>
               {%- endif -%}
