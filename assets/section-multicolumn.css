@@ -1,5 +1,12 @@
 .multicolumn .title {
   margin: 0;
+  max-width: 50%;
+}
+
+@media (max-width: 780px) {
+  .multicolumn .title {
+    max-width:100%;
+  }
 }
 
 .multicolumn.no-heading .title {
