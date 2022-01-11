@@ -12,11 +12,11 @@ style="background-color: {{section.settings.wavySectionColor}}; margin-top: -100
   <div>
       <svg class="wavyWave" style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
   </div>
-  <div class="wavyBody" style="position: relative; background-color: {{section.settings.wavySectionColor}};">
+  <div class="wavyBody" style="position: relative; display:block; background-color: {{section.settings.wavySectionColor}};">
 {%- endif -%}
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}" style="background-color: {{section.settings.wavySectionColor}};">
   <div 
- 
+    style="padding-top:100px;"
     class="page-width" 
  
   >
@@ -32,7 +32,7 @@ style="background-color: {{section.settings.wavySectionColor}}; margin-top: -100
                 {{ section.settings.subTitle | escape }}
               </h4>
     <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
+      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet{% else %} grid--4-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
         style="justify-content: center;"
@@ -47,7 +47,7 @@ style="background-color: {{section.settings.wavySectionColor}}; margin-top: -100
         -%}
         {%- for block in section.blocks -%}
           <li class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <div class="multicolumn-card" style="margin-bottom: 10px; height: auto;">
+            <div class="multicolumn-card" style="margin-bottom: 10px;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
