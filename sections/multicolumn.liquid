@@ -13,24 +13,51 @@ style=" margin-top: -150px;"
 {%- endif -%}
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}" style="background-color: {{section.settings.wavySectionColor}};">
   <div 
-    style="padding-top:100px;"
+    style="padding-top:100px; padding-bottom: 100px;"
 
     class="page-width" 
  
   >
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
-      <h2 class="title" style="margin-right:auto; margin-left: auto;">
+      <h2 class="title" 
+      {%- if text-align == center -%}
+          style="margin-right:auto; margin-left: auto;"
+      {%- endif -%}
+
+      {%- if text-align == left -%}
+      style="margin-right:0; margin-left: 0;"
+      {%- endif -%}
+
+        {%- if text-align == right -%}
+        style="margin-right:0; margin-left: auto;"
+        {%- endif -%}
+      >
       <i> {{ section.settings.title | escape }} </i> 
       </h2>
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
       <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
       {%- endif -%}
     </div>
-              <h4 style="text-align: center; margin:0 0 50px 0;">
+              <h4 
+                style="
+                  {%- if text-align == center -%}
+                    text-align: center; 
+                  {%- endif -%}
+
+                  {%- if text-align == left -%}
+                    text-align: left; 
+                  {%- endif -%}
+
+                  {%- if text-align == right -%}
+                    text-align: right; 
+                  {%- endif -%}
+                
+                  margin:0 0 50px 0;"
+                >
                 {{ section.settings.subTitle | escape }}
               </h4>
     <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet{% else %} grid--4-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
+      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet {% if section.blocks.size == 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--3-col-desktop{% elsif section.blocks.size == 3 and section.settings.image_width == 'full' %}grid--3-col-tablet{% else %} grid--4-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
         style="justify-content: center;"
@@ -128,10 +155,24 @@ style=" margin-top: -150px;"
       "label": "t:sections.multicolumn.settings.title.label"
     },
     {
-      "type": "text",
-      "id": "subTitle",
-      "default": "Multicolumn",
-      "label": "subtile"
+      "type": "text-align",
+      "id": "text_align",
+      "default": "center",
+      "label": "Text Alignment"
+    },
+    {
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
     },
     {
       "type": "select",
