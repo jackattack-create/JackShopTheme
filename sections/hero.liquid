@@ -2,11 +2,11 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
 <div  class="hero-container" 
-      style="background-image: url({{section.settings.img_bg | img_url: 'Medium' }});
+      style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
         {%- if section.settings.background_img_style == 'fill' -%}
-          background-size: fill;
+          background-size:fill;
         {%- elsif section.settings.background_img_style == 'cover' -%}
-          background-size: cover;
+          background-size:cover;
         {%- endif -%}
       "
 >
