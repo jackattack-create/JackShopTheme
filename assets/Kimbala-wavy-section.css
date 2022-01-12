@@ -103,6 +103,7 @@
 
 .wavy-blog p {
   font-size: 12px;
+  max-width: 250px;
 }
 
 .wavyTitle {
