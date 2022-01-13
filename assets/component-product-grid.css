@@ -43,13 +43,15 @@ ul.product-grid li.grid__item {
   margin-bottom: 10px;
   padding-right: 0;
   max-width:150px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .card__inner {
   margin-left: auto;
   margin-right: auto;
   width: 20rem;
-  height: 20.5rem;
+  max-height: 25rem;
 }
 
 li button a {
