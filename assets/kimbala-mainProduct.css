@@ -82,6 +82,9 @@ div.wavySection {
 }
 
 @media (max-width: 768px) {
+  .product__media.media {
+    height: 30rem;
+  }
   .secondary-prod-info {
     width: 100%;
     margin-left: 0;
