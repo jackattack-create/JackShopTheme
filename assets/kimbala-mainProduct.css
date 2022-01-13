@@ -62,9 +62,12 @@ div.wavySection {
 .product__media.media {
   padding: 20px;
   display: flex;
-  height: 90rem;
+  width:30rem;
+  height: 60rem;
   align-items: center;
   justify-content: center;
+
+  margin: 0 auto;
   
 }
 
