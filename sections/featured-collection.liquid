@@ -41,7 +41,7 @@
           %}
           <form class="kimbalaButton"  method="post" action="/cart/add">
             <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
-          <input class="kimbalaButton" name="add" value="ADD TO CART" type="submit" style="background-color:{{section.settings.button_color}}; color: {{section.settings.button_text_color}} "/>
+            <input class="kimbalaButton" name="add" value="ADD TO CART" type="submit" style="background-color:{{section.settings.button_color}}; color: {{section.settings.button_text_color}}; pointer-events: auto; "/>
           </form>
         </li>
       {%- else -%}
