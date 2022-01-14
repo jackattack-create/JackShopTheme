@@ -41,7 +41,7 @@
 }
 
 .hero-side-text h1 {
-  text-align:flex-start;
+  text-align:start;
 }
 
 @media (max-width: 780px) {
