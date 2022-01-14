@@ -29,6 +29,7 @@ ul.product-grid li.grid__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom:0;
 }
 
 .card-information__wrapper {
