@@ -217,6 +217,10 @@
   padding: 2.5rem 2.5rem;
 }
 
+.multicolumn-card__info p {
+  line-height: 1.3;
+}
+
 .background-none .multicolumn-card__info {
   padding-top: 0;
   padding-left: 0;
