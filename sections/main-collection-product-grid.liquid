@@ -18,7 +18,7 @@
   </div>
 {%- endif -%}
 
-<div id="ProductGridContainer" style="background-color: {{section.settings.back_color}};">
+<div id="ProductGridContainer" style="background-color: {{section.settings.back_color}}; padding-bottom:100px;">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
       <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
