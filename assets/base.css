@@ -1,5 +1,8 @@
 /*  custom font */
 
+p {
+  line-height: 1.3;
+}
 
 
 /* Color custom properties */
