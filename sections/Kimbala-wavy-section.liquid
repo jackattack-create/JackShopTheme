@@ -30,6 +30,10 @@
                     <p class="single-copy page-width page-width--narrow">
                         {{block.settings.wavy_content_richtext}}
                     </p>  
+
+                {%- when '@app' -%} 
+                    {%- render app -%}
+                    
                     
                 {%- when 'button' -%}  
                 <a href="{{ block.settings.button_link }}">
@@ -115,6 +119,9 @@
             "name": "Wavy Section"
         }],
     "blocks": [
+        {
+            "type": "@app"
+        },
         {
             "type": "header",
             "name": "title",

@@ -550,6 +550,8 @@
   {%- endfor -%}
 </section>
 
+
+
 <div class="wavySection" style="margin-bottom: -100px;">
   <div>
       <svg class="wavyWave"style="display:block; padding-top:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{section.settings.wavySectionColor}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
@@ -559,18 +561,15 @@
     {%- if product.metafields.reviews.rating.value != blank -%}
     <div class="customer__reviews">
       <div>
+        {%- render '@app' -%}
         <h2>Customer Reviews</h2>
+        <div class="total-rating">
+          <h3>{{ product.metafields.reviews.rating.value }}</h3>
+        
+         </div>
       </div>
         <div>
-            {% liquid
-            assign rating_decimal = 0
-            assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-            if decimal >= 0.3 and decimal <= 0.7
-              assign rating_decimal = 0.5
-            elsif decimal > 0.7
-              assign rating_decimal = 1
-            endif
-            %}
+            
             <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
               <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
             </div>
@@ -1010,6 +1009,7 @@
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
+    
     {
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",
@@ -1032,24 +1032,6 @@
       "id": "wavySectionColor",
       "label": "Color",
       "default": "#ffcccc"
-    },
-    {
-      "type": "richtext",
-      "id": "caffine",
-      "label": "Caffine Ammount"
-
-    },
-    {
-      "type": "richtext",
-      "id": "ingredients",
-      "label": "Ingredients"
-
-    },
-    {
-      "type": "richtext",
-      "id": "pairings",
-      "label": "Pairings"
-
     }
   ]
 }

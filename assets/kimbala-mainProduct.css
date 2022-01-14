@@ -80,6 +80,12 @@ div.wavySection {
   flex-direction: row;
 }
 
+.rating-row {
+  display: flex;
+  flex-direction:row;
+  height: 50px;
+}
+
 @media (max-width: 768px) {
   .product__media.media {
     height: 30rem;
