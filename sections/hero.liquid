@@ -1,12 +1,27 @@
 
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+
 <div  class="hero-container" 
-      style="background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+      style="
+        @media(min-width: 781px) {
+
+          background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+        }
+
+        @media(max-width: 780px) {
+          background-image: url({{section.settings.mobile_bg | img_url: 'Medium' }});
+        }
         {%- if section.settings.background_img_style == 'fill' -%}
           background-size:fill;
         {%- elsif section.settings.background_img_style == 'cover' -%}
           background-size:cover;
+        {%- endif -%}
+
+        {%- if section.settings.text_position == 'top' -%}
+          justify-content: flex-start;
+        {%- elsif section.settings.background_img_style == 'middle' -%}
+          justify-content: center;
         {%- endif -%}
       "
 >
@@ -60,6 +75,27 @@
             "id": "image_bg",
             "label": "Background Image"
         }, 
+        {
+          "type": "image_picker",
+          "id": "mobile_bg",
+          "label": "Background Mobile Image"
+        }, 
+        {
+          "type": "select",
+            "id": "text_position",
+            "label": "Text Position",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "middle",
+                "label": "Middle"
+              }
+            ]
+        },
+
         {
           
             "type": "select",
