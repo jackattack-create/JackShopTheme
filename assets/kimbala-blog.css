@@ -33,4 +33,8 @@
     .featured-article__desc {
         width: 100%;
     }
+
+    .hero-text-container h2{
+        width: 80%;
+    }
 }

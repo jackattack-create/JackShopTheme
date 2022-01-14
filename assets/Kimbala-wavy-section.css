@@ -104,6 +104,7 @@
 .wavy-blog p {
   font-size: 12px;
   max-width: 250px;
+  margin-left:0;
 }
 
 .wavyTitle {
@@ -118,6 +119,11 @@
   .fullWavyImgTextPair, 
   .wavy-blog-container {
     flex-direction: column;
+  }
+
+  .img-textBlock h2,
+  .img-textBlock button {
+    margin: 5px auto;
   }
 
   .WavyImgTextPair img,

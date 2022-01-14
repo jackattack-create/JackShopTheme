@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 80vh;
 
-  padding:100px 20px 50px 0;
+  padding:100px 20px 50px;
 
   
   background-position: center;
@@ -22,7 +22,7 @@
 }
 
 .hero-container h4 {
-  margin:0;
+  margin:10px;
   font-size: 24px;
 }
 
@@ -31,6 +31,7 @@
   font-family: "Fira Sans";
   font-weight: 400;
   font-style: italic;
+  text-align: center;
 }
 
 .hero-side-text {
