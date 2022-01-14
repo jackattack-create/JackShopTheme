@@ -4,12 +4,12 @@
 
 <div  class="hero-container" 
       style="
-        @media(min-width: 781px) {
+        @media (min-width: 781px) {
 
           background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
         }
 
-        @media(max-width: 780px) {
+        @media (max-width: 780px) {
           background-image: url({{section.settings.mobile_bg | img_url: 'Medium' }});
         }
         {%- if section.settings.background_img_style == 'fill' -%}
