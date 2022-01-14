@@ -43,7 +43,18 @@
                 {%- when 'productLink' -%}
                     <div >
                         <div class="WavyImgTextPair">
-                            <img src={{block.settings.product.images[0].src | img_url: 'large'}}>
+                        <img
+                            srcset="{%- if block.settings.product.image.width >= 275 -%}{{ block.settings.product.image | img_url: '275x' }} 275w,{%- endif -%}
+                            {%- if block.settings.product.image.width >= 550 -%}{{ block.settings.product.image  | img_url: '550x' }} 550w,{%- endif -%}
+                            {%- if block.settings.product.image.width >= 710 -%}{{ block.settings.product.image  | img_url: '710x' }} 710w,{%- endif -%}
+                            {%- if block.settings.product.image.width >= 1420 -%}{{ block.settings.product.image  | img_url: '1420x' }} 1420w,{%- endif -%}
+                            {{ block.settings.product.image  | img_url: 'master' }} {{ block.settings.image.width }}w"
+                          src="{{ block.settings.product.image  | img_url: '550x' }}"
+                          alt="{{ block.settings.product.image.alt }}"
+                          height="{{ block.settings.product.image.height }}"
+                          width="{{ block.settings.product.image.width }}"
+                          loading="lazy"
+                          />
                             <div class="img-textBlock">
                                 <h2>{{block.settings.product.title}}</h2>
                                 <button class="kimbalaButton">
