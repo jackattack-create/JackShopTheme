@@ -561,7 +561,6 @@
     {%- if product.metafields.reviews.rating.value != blank -%}
     <div class="customer__reviews">
       <div>
-        {%- render '@app' -%}
         <h2>Customer Reviews</h2>
         <div class="total-rating">
           <h3>{{ product.metafields.reviews.rating.value }}</h3>
