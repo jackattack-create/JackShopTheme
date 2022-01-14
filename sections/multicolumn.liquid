@@ -141,11 +141,18 @@
               
                 {%- endif -%}
               <div class="multicolumn-card__info">
+                
                 {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
+                <h3>{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  {%- if block.settings.italicized == true -%}
+                    <i>
+                  {% endif %}
+                      <div class="rte">{{ block.settings.text }}</div>
+                  {%- if block.settings.italicized == true -%}
+                    </i>
+                  {% endif %}
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
@@ -188,6 +195,14 @@
   "class": "spaced-section spaced-section--full-width",
   "tag": "section",
   "settings": [
+    {
+      
+        "type": "checkbox",
+        "id": "italicized",
+        "label": "Column text Italicized",
+        "default": false
+      
+    },
     {
       "type": "text",
       "id": "title",

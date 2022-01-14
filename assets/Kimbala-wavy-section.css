@@ -25,6 +25,7 @@
 
 .wavyBody p {
   max-width:640px;
+  line-height: 1.3;
 }
 
 .wavyWave {
