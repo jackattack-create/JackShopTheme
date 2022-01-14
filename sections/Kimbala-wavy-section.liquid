@@ -37,6 +37,7 @@
                        {{ block.settings.button_text }}
                    </button>   
                 </a>
+
                 {%- when 'description' -%}
                     <div class="fullWavyImgTextPair" style="height: 100%;">
                         <img src={{block.settings.side_img | img_url: 'large'}} />
@@ -145,14 +146,10 @@
                     "label": "Button Text",
                     "default": "Click Here"
                 },
-                {
-                    
-                        
-                            "type": "link_list",
-                            "id": "button_link",
-                            "label": "Link"
-                       
-                   
+                {        
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Url"
                 }
             ]
        
