@@ -31,7 +31,12 @@
                         {{block.settings.wavy_content_richtext}}
                     </p>  
                     
-                
+                {%- when 'button' -%}  
+                <a href="{{ block.settings.button_link }}">
+                   <button class="kimbalaButton">
+                       {{ block.settings.button_text }}
+                   </button>   
+                </a>
                 {%- when 'description' -%}
                     <div class="fullWavyImgTextPair" style="height: 100%;">
                         <img src={{block.settings.side_img | img_url: 'large'}} />
@@ -125,6 +130,28 @@
                         "id": "header_text_color",
                         "label": "Text Color",
                         "default": "#333"
+                   
+                }
+            ]
+       
+        },
+        {
+            "type": "button",
+            "name": "Button",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "Click Here"
+                },
+                {
+                    
+                        
+                            "type": "link_list",
+                            "id": "button_link",
+                            "label": "Link"
+                       
                    
                 }
             ]
