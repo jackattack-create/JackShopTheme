@@ -39,7 +39,7 @@
             show_image_outline: section.settings.show_image_outline,
             show_rating: section.settings.show_rating
           %}
-          <form class="kimbalaButton"  method="post" action="/cart/add">
+          <form class="kimbalaButton"  method="post" action="/cart/add" >
             <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
             <input class="kimbalaButton" name="add" value="ADD TO CART" type="submit" style="background-color:{{section.settings.button_color}}; color: {{section.settings.button_text_color}}; pointer-events: auto; "/>
           </form>

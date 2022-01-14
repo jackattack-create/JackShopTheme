@@ -82,12 +82,16 @@
           </summary>
         <div class="accordion__content rte">
           <div class="secondary-prod-info">
-            <div>
-               <p> <b><i>Caffeine:</i></b> {{product.metafields.my_fields.caffine}}</p>
-            </div>
-            <div>
-             <p> <b><i>Ingredients:</i></b>  {{product.metafields.my_fields.ingredients}}</p>
-            </div>
+            {%- if product.metafields.my_fields.caffine != blank -%}
+              <div>
+                <p> <b><i>Caffeine:</i></b> {{product.metafields.my_fields.caffine}}</p>
+              </div>
+            {%- endif -%}
+            {%- if product.metafields.my_fields.ingredients != blank -%}
+              <div>
+              <p> <b><i>Ingredients:</i></b>  {{product.metafields.my_fields.ingredients}}</p>
+              </div>
+            {%- endif -%}
           </div>
           <div>
            <p> <b><i>Benefits:</i></b> </p>

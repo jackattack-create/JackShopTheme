@@ -62,7 +62,7 @@ div.wavySection {
   padding: 20px;
   display: flex;
   width:30rem;
-  height: 60rem;
+  max-height: 60rem;
   align-items: center;
   justify-content: center;
 

@@ -7,6 +7,8 @@ button.kimbalaButton {
 
     border-radius: 5px;
     width: 15rem;
+
+    pointer-events: all;
 }
 input.kimbalaButton {
     border: none;
