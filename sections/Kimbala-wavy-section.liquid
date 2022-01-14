@@ -73,7 +73,11 @@
                                 <img src="{{article.image.src | img_url: 'medium'}}" />
                             </a>
                         <i><h3 style="color: {{section.settings.wavySectionTextColor}};">{{article.title}}</h3></i>
-                                <p>{{article.excerpt | truncate: 180}}</p>
+                         {%- if article.excerpt != blank -%}       
+                            <p>{{article.excerpt | truncate: 180}}</p>
+                            {%- else -%}  
+                            <p>{{article.content | truncate: 180}}</p>
+                            {%- endif -%}  
                         </div>
                     
                     {%- endfor -%}
