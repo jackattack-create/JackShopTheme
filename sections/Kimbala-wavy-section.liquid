@@ -29,9 +29,9 @@
                 {%- when 'copy' -%}  
                     <p 
                         class="single-copy page-width page-width--narrow"
-                        {%- if block.settings.text_align == left -%}
+                        {%- if block.settings.text_align == 'left' -%}
                             style="text-align: left;"
-                        {%- elsif block.settings.text_align == center -%}
+                        {%- elsif block.settings.text_align == 'center' -%}
                             style="text-align: center;"
                         {%- endif -%}
                     >
@@ -56,9 +56,9 @@
                             <h2>{{block.settings.wavy_title}}</h2>
                             <p
 
-                                {%- if block.settings.text_align == left -%}
+                                {%- if block.settings.text_align == 'left' -%}
                                     style="text-align: left;"
-                                {%- elsif block.settings.text_align == center -%}
+                                {%- elsif block.settings.text_align == 'center' -%}
                                     style="text-align: center;"
                                 {%- endif -%}
                             >{{block.settings.description}}</p>
