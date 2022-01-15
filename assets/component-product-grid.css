@@ -34,7 +34,7 @@ ul.product-grid li.grid__item {
   flex-grow: 0;
 }
 
-li.grid-item {
+ul.product__media-list li.grid-item {
   width:100%;
 }
 
