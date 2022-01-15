@@ -34,6 +34,10 @@ ul.product-grid li.grid__item {
   flex-grow: 0;
 }
 
+.grid-item {
+  width:100%;
+}
+
 .card-information__wrapper {
   display: flex;
   flex-direction: column;
