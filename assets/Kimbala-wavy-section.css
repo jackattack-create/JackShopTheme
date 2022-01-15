@@ -87,7 +87,7 @@
 
 .wavy-blog {
   margin-top: 20px;
-  width: 250px;
+  width: 30%;
 }
 
 .wavy-blog img {
@@ -104,7 +104,7 @@
 
 .wavy-blog p {
   font-size: 12px;
-  max-width: 250px;
+  width: 30%;
   margin-left:0;
 }
 
@@ -125,6 +125,7 @@
   .img-textBlock h2,
   .img-textBlock button {
     margin: 5px auto;
+    text-align:center;
   }
 
   .WavyImgTextPair img,
