@@ -27,7 +27,7 @@
                     <i><h2 class="wavyTitle" style="color: {{block.settings.header_text_color}}">{{block.settings.section_title}}</h2></i>
 
                 {%- when 'copy' -%}  
-                    <p 
+                    <div 
                         class="single-copy page-width page-width--narrow"
                         {%- if block.settings.text_align == 'left' -%}
                             style="text-align: left;"
@@ -36,7 +36,7 @@
                         {%- endif -%}
                     >
                         {{block.settings.wavy_content_richtext}}
-                    </p>  
+                    </div>  
 
                 {%- when '@app' -%} 
                     {%- render app -%}
