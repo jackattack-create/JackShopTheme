@@ -15,23 +15,32 @@
         {%- elsif section.settings.background_img_style == 'cover' -%}
           background-size:cover;
         {%- endif -%}
-
-        {%- if section.settings.text_position == 'top' -%}
-          justify-content: flex-start;
-        {%- endif -%}
-        {%- if section.settings.background_img_style == 'middle' -%}
-          justify-content: center;
-        {%- endif -%}
       "
 >
   {%- for block in section.blocks -%}
   {%- case block.type -%}
   {%- when 'heading' -%}
         <div class="hero-text-container">
-        <h4 style="color: {{block.settings.header_color_id}}">
+        <h4 style="
+          color: {{block.settings.header_color_id}}
+          {%- if section.settings.text_position == 'top' -%}
+          justify-content: flex-start;
+        {%- endif -%}
+        {%- if section.settings.background_img_style == 'middle' -%}
+          justify-content: center;
+        {%- endif -%}
+          ">
         {{block.settings.rich_text}}
       </h4>
-      <h1 style="color: {{block.settings.header_color_id}}">
+      <h1 style="
+      color: {{block.settings.header_color_id}}
+      {%- if section.settings.text_position == 'top' -%}
+          justify-content: flex-start;
+        {%- endif -%}
+        {%- if section.settings.background_img_style == 'middle' -%}
+          justify-content: center;
+        {%- endif -%}
+      ">
         {{block.settings.big_text}}
       </h1>
     </div>
