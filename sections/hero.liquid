@@ -1,18 +1,14 @@
 
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
-<style>
-  @media (min-width: 800px) {
-    background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
-  }
-
-  @media (max-width: 799px) {
-    background-image: url({{section.settings.mobile_bg | img_url: 'Medium' }});
-  }
-</style>
 
 <div  class="hero-container" 
       style="
+        
+        
+          background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+        
+
         
         {%- if section.settings.background_img_style == 'fill' -%}
           background-size:fill;
@@ -22,7 +18,8 @@
 
         {%- if section.settings.text_position == 'top' -%}
           justify-content: flex-start;
-        {%- elsif section.settings.background_img_style == 'middle' -%}
+        {%- endif -%}
+        {%- if section.settings.background_img_style == 'middle' -%}
           justify-content: center;
         {%- endif -%}
       "
