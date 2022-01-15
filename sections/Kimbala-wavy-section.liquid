@@ -27,7 +27,14 @@
                     <i><h2 class="wavyTitle" style="color: {{block.settings.header_text_color}}">{{block.settings.section_title}}</h2></i>
 
                 {%- when 'copy' -%}  
-                    <p class="single-copy page-width page-width--narrow">
+                    <p 
+                        class="single-copy page-width page-width--narrow"
+                        {%- if block.settings.text_align == left -%}
+                            style="text-align: left;"
+                        {%- elsif block.settings.text_align == center -%}
+                            style="text-align: center;"
+                        {%- endif -%}
+                    >
                         {{block.settings.wavy_content_richtext}}
                     </p>  
 
@@ -47,7 +54,14 @@
                         <img src={{block.settings.side_img | img_url: 'large'}} />
                         <div class="img-textBlock">
                             <h2>{{block.settings.wavy_title}}</h2>
-                            <p>{{block.settings.description}}</p>
+                            <p
+
+                                {%- if block.settings.text_align == left -%}
+                                    style="text-align: left;"
+                                {%- elsif block.settings.text_align == center -%}
+                                    style="text-align: center;"
+                                {%- endif -%}
+                            >{{block.settings.description}}</p>
                         </div>
                     </div>
                 {%- when 'productLink' -%}
@@ -175,6 +189,23 @@
                         "id": "wavy_content_richtext",
                         "label": "Body"
                     
+                },
+                {
+            
+                    "type": "select",
+                    "id": "text_align",
+                    "label": "Text Alignment",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        }
+                    ]
+                
                 }
             ]
         },
@@ -197,6 +228,23 @@
                         "type": "text",
                         "id": "description",
                         "label": "description"
+                    },
+                    {
+            
+                        "type": "select",
+                        "id": "text_align",
+                        "label": "Text Alignment",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            }
+                        ]
+                    
                     }
                 ]
             },
@@ -241,21 +289,8 @@
                         "label": "Featured Article"
                     }
                 ]
-            },
-            {
-                "type": "page",
-                "name": "Page content",
-                "settings": [
-                    {
-                        "type": "page",
-                        "id": "wavy_page",
-                        "label": "Page Content"
-                        
-                        
-                    }
-                ]
-                
             }
+            
         ],
     "settings": [
         {
