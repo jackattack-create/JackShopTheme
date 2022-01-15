@@ -7,8 +7,8 @@
           background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
           {%- if section.settings.text_position == 'top' -%}
           justify-content: flex-start;
-        {%- endif -%}
-        {%- if section.settings.background_img_style == 'middle' -%}
+        
+        {%- elsif section.settings.text_position == 'middle' -%}
           justify-content: center;
         {%- endif -%}
 
