@@ -1,8 +1,9 @@
-.secondary-prod-info {
-  width: calc(36% - 1rem / 2);
+.kimbala.product__accordion {
+  width: calc(64% - 1rem / 2);
   padding: 0;
   margin: 0;
   margin-left: 20px;
+  margin-top: 20px;
   
 }
 
