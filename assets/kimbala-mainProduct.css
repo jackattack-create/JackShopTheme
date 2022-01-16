@@ -61,7 +61,7 @@ div.wavySection {
 .product__media.media {
   
   display: flex;
-  width:100%;
+  width:30rem;
   height: 45rem;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@ div.wavySection {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .slider.slider--mobile {
     position: relative;
     flex-wrap: inherit;
@@ -120,7 +120,7 @@ div.wavySection {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .slider-buttons {
     display: flex;
   }

@@ -9,6 +9,9 @@
         "title": {
           "type": "title"
         },
+        "ingredients": {
+          "type": "content"
+        },
         "content": {
           "type": "content"
         },
