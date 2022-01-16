@@ -23,6 +23,10 @@
   padding: 0;
 }
 
+.blog-articles__article {
+  margin:15px;
+}
+
 .article-card {
   background-color: rgba(var(--color-foreground), 0.04);
   align-self: flex-start;
