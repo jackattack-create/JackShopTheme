@@ -115,6 +115,10 @@
 
 }
 
+.kimbalaButton {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 780px) {
   .WavyImgTextPair,
   .fullWavyImgTextPair, 
