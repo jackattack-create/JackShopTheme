@@ -50,6 +50,15 @@ slider-component {
   }
 }
 
+.slider--circles {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 10px;
+}
+
+
+
 /* Scrollbar */
 
 .slider {
@@ -98,6 +107,8 @@ slider-component {
   .slider-buttons {
     display: none;
   }
+
+  
 }
 
 @media screen and (min-width: 750px) {
@@ -105,6 +116,41 @@ slider-component {
     display: none;
   }
 }
+
+.slider-buttons .not-desktop-hidden {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-buttons.not-desktop-hidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.slider--circles li {
+  list-style: none;
+}
+
+.circle {
+  width:10px;
+  height:10px;
+  border-radius: 100%;
+  border: #111 solid 1px;
+  background-color: transparent;
+  cursor: pointer;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.circle.active {
+  background-color: #111;
+  fill: #111;
+}
+
+
 
 .slider-button {
   color: rgba(var(--color-foreground), 0.75);
@@ -144,3 +190,7 @@ slider-component {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) translateX(-0.15rem) scale(1.07);
 }
+
+
+
+/* desktop slider functionality */

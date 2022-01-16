@@ -59,19 +59,19 @@ div.wavySection {
 }
 
 .product__media.media {
-  padding: 20px;
+  
   display: flex;
-  max-width:30rem;
-  height: 60rem;
+  width:100%;
+  height: 45rem;
   align-items: center;
   justify-content: center;
 
   margin: 0 auto;
-  
+  flex-grow: 1;
 }
 
 .product__media.media img {
-  height: 100%;
+  max-height: 100%;
 }
 
 
@@ -88,10 +88,40 @@ div.wavySection {
 
 @media (max-width: 768px) {
   .product__media.media {
-    height: 30rem;
+    max-height: 100%;
   }
   .secondary-prod-info {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .no-js slider-component .slider {
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .slider.slider--mobile {
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+  }
+
+  .slider.slider--mobile .slider__slide {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .slider-buttons {
+    display: flex;
   }
 }

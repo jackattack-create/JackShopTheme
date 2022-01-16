@@ -36,7 +36,7 @@
 {%- endif -%}
 
 <section class="page-width">
-  <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="product grid grid--1-col">
     <div class="grid__item product__media-wrapper">
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
@@ -59,15 +59,24 @@
           {%- endfor -%}
         </ul>
         {%- assign filtered_media_size = product.media.size | minus: variant_images.size | plus: 1 -%}
-        <div class="slider-buttons no-js-hidden{% if product.media.size < 2 or section.settings.hide_variants and filtered_media_size < 2 %} small-hide{% endif %}">
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
+        <div class="slider-buttons not-desktop-hidden no-js-hidden{% if product.media.size < 2 or section.settings.hide_variants and filtered_media_size < 2 %} small-hide{% endif %}">
+          <button type="button" class="slider-button not-desktop-hidden slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+          <!-- <div class="slider-counter caption">
+            <span class="visually-hidden slider-counter--current">1</span>
             <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ filtered_media_size }}{% else %}{{ product.media.size }}{% endif %}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
+            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span> -->
+            <div class="slider--circles">
+              <span>{{ product.id }}</span>
+              {%- for media in product.media -%}
+              <span>{{ product.selected_or_first_available_variant.featured_media }}</span>
+                <span class="circle {%- if media.id == product.selected_or_first_available_variant.featured_media.id -%} active {%- endif -%}" data-media-id="{{ media.id }}" ></span>
+              
+              {%- endfor -%}
+            </div>
+
+            <!-- <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ filtered_media_size }}{% else %}{{ product.media.size }}{% endif %}</span> -->
+          <!-- </div> -->
+          <button type="button" class="slider-button not-desktop-hidden slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
       </slider-component>
       {%- if first_3d_model -%}
