@@ -89,7 +89,7 @@
                         <i><h3 style="color: {{section.settings.wavySectionTextColor}};">{{article.title}}</h3></i>
                          {%- if article.excerpt != blank -%}       
                             <p>{{article.excerpt | truncate: 180}}</p>
-                            {%- else -%}  
+                        {%- elsif article.excerpt == blank -%}  
                             <p>{{article.content | truncate: 180}}</p>
                         {%- endif -%}  
                         </div>
