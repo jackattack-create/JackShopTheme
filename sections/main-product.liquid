@@ -101,7 +101,87 @@
         </button>
       {%- endif -%}
       
+      <div class="kimbala product__accordion accordion secondary-prod-info desktop-visible" {{ block.shopify_attributes }} >
+        <details open>
+          <summary>
+            <div class="summary__title" style="display:flex; justify-content: space-between;">
+              <h2 class="h4 accordion__title">
+               <b> PRODUCT INFORMATION </b>
+              </h2>
+              <span>-</span>
+            </div>
+          </summary>
+        <div class="accordion__content rte">
+          <div class="secondary-prod-info">
+            {%- if product.metafields.my_fields.caffine != blank -%}
+              <div>
+                <p> <b><i>Caffeine:</i></b> {{product.metafields.my_fields.caffine}}</p>
+              </div>
+            {%- endif -%}
+            {%- if product.metafields.my_fields.ingredients != blank -%}
+              <div>
+              <p> <b><i>Ingredients:</i></b>  {{product.metafields.my_fields.ingredients}}</p>
+              </div>
+            {%- endif -%}
+          </div>
+          {%- if product.metafields.my_fields.benefits == true  -%}
+          <div>
+           <p> <b><i>Benefits:</i></b> </p>
+            <div class="icons-box">
+              {%- if product.metafields.my_fields.vegetarian == true  -%}
+              <div class="icon-box">
+                {%- render 'vegetarian' -%}
+              </div>
+              {%- endif  -%}
+              {%- if product.metafields.my_fields.gluten_free == true  -%}
+                <div class="icon-box">
+                  {%- render 'Gluten-free' -%}
+                </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.no_shelf_stabilizers == true  -%}
+              <div class="icon-box">
+                {%- render 'No-shelf-stabilizers' -%}
+              </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.no_preservitives == true  -%}
+              <div class="icon-box">
+                {%- render 'no-preservitives' -%}
+              </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.no_artificial_flavors == true  -%}
+              <div class="icon-box">
+                {%- render 'no-artifical-flavors' -%}
+              </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.vegan == true  -%}
+              <div class="icon-box">
+                {%- render 'vegan' -%}
+              </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.no_refind_sugar == true  -%}
+              <div class="icon-box">
+                {%- render 'no-refind-sugar' -%}
+              </div>
+              {%- endif -%}
+              {%- if product.metafields.my_fields.no_caffeine == true  -%}
+              <div class="icon-box">
+                {%- render 'no-caffeine' -%}
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- endif -%}
+          <div class="secondary-prod-info">
+            <p><b><i>Pair With:</i></b></p>
+            <p>{{product.metafields.my_fields.pairings}}</p>
+          </div>
+        </div>
+        
+        </details>
+      </div>
     </div>
+
+
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -525,7 +605,7 @@
   {%- endfor -%}
 </section>
 
-<div class="kimbala product__accordion accordion secondary-prod-info" {{ block.shopify_attributes }} >
+<div class="kimbala product__accordion accordion secondary-prod-info mobile-visible" {{ block.shopify_attributes }} >
   <details open>
     <summary>
       <div class="summary__title" style="display:flex; justify-content: space-between;">

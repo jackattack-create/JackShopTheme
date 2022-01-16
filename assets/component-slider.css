@@ -32,7 +32,7 @@ slider-component {
   }
 }
 
-@media screen and (min-width: 989px) {
+@media screen and (max-width: 989px) {
   .slider.slider--tablet {
     position: relative;
     flex-wrap: inherit;
@@ -49,15 +49,6 @@ slider-component {
     padding-bottom: 0;
   }
 }
-
-.slider--circles {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 10px;
-}
-
-
 
 /* Scrollbar */
 
@@ -102,55 +93,18 @@ slider-component {
   align-items: center;
   justify-content: center;
 }
-
+/* 
 @media screen and (min-width: 990px) {
   .slider-buttons {
     display: none;
   }
-
-  
 }
 
 @media screen and (min-width: 750px) {
   .slider--mobile + .slider-buttons {
     display: none;
   }
-}
-
-.slider-buttons .not-desktop-hidden {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-buttons.not-desktop-hidden {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.slider--circles li {
-  list-style: none;
-}
-
-.circle {
-  width:10px;
-  height:10px;
-  border-radius: 100%;
-  border: #111 solid 1px;
-  background-color: transparent;
-  cursor: pointer;
-  list-style: none;
-  margin: 0 5px;
-}
-
-.circle.active {
-  background-color: #111;
-  fill: #111;
-}
-
-
+} */
 
 .slider-button {
   color: rgba(var(--color-foreground), 0.75);
