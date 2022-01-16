@@ -31,7 +31,7 @@ ul.product-grid li.grid__item {
   align-items: center;
   padding-bottom:0;
   justify-content: space-between;
-  flex-grow: 0;
+  flex-grow: 1;
 }
 
 ul.product__media-list li.grid-item {
