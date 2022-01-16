@@ -71,9 +71,9 @@
             <span class="slider-counter--current">1</span>
             <span aria-hidden="true"> / </span>
             <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <div class="slider--circles">
+            <!-- <div class="slider--circles">
               
-              <!-- <span class="slider-counter--current">1</span>
+              <span class="slider-counter--current">1</span>
               {%- for media in product.media -%}
                 <span class="circle slider-counter--curent
                 {%- if media.id == media.id -%} 
@@ -81,10 +81,10 @@
                 {%- endif -%}
                 " 
                 data-media-id="{{ media.id }}" 
-                ></span> -->
+                ></span>
               
               {%- endfor -%}
-            </div>
+            </div> -->
 
             <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ filtered_media_size }}{% else %}{{ product.media.size }}{% endif %}</span>
           </div>
