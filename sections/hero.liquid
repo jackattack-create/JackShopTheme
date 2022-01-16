@@ -1,10 +1,26 @@
 
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
 
-<div  class="hero-container" 
+.hero-container {
+    
+      background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+    
+
+    @media(max-width:779px) {
+      background-image: url({{section.settings.mobile_bg | img_url: 'Medium' }});
+    }
+}
+
+{%- endstyle -%}
+
+
+<div  
+
+      class="hero-container Desktop" 
       style="
-          background-image: url({{section.settings.image_bg | img_url: 'Medium' }});
+          
           {%- if section.settings.text_position == 'top' -%}
           justify-content: flex-start;
         
