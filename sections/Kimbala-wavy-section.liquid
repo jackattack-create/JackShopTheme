@@ -43,9 +43,9 @@
                     
                     
                 {%- when 'button' -%}  
-                <button class="kimbalaButton">
+                <button class="kimbalaButton" style="padding-top: 10px; padding-bottom: 10px;">
                     <a href="{{ block.settings.button_link }}">
-                       {{ block.settings.button_text }}
+                      <b> {{ block.settings.button_text }} </b>
                     </a>
                 </button>   
 
@@ -70,7 +70,7 @@
                             <img src={{block.settings.product.images[0].src | img_url: 'large'}}>
                             <div class="img-textBlock">
                                 <h2>{{block.settings.product.title}}</h2>
-                                <button class="kimbalaButton">
+                                <button class="kimbalaButton" >
                                 <a href="{{block.settings.product.url}}">Buy it now</a> 
                                 </button>
                             </div>
