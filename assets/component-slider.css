@@ -93,8 +93,8 @@ slider-component {
   align-items: center;
   justify-content: center;
 }
-/* 
-@media screen and (min-width: 990px) {
+
+/* @media screen and (min-width: 990px) {
   .slider-buttons {
     display: none;
   }

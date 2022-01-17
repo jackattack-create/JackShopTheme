@@ -3,6 +3,7 @@
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 {{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
 
+
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -53,7 +54,7 @@
       {%- endfor -%}
     </ul>
     {%- if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_mobile and section.settings.products_to_show > 2 -%}
-      <div class="slider-buttons no-js-hidden{% if section.settings.collection.all_products_count < 5 %} medium-hide{% endif %}{% if section.settings.collection.all_products_count < 3 %} small-hide{% endif %}">
+      <div class="slider-buttons no-js-hidden mobile-visible {% if section.settings.collection.all_products_count < 5 %} medium-hide{% endif %}{% if section.settings.collection.all_products_count < 3 %} small-hide{% endif %}">
         <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
         <div class="slider-counter caption">
           <span class="slider-counter--current">1</span>

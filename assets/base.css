@@ -2361,7 +2361,20 @@ details-disclosure > details {
   }
 }
 
-/* What gives the waves for the wavySections overlap */
+@media (max-width: 750px) {
+  tr {
+    display: flex;
+    flex-direction:column;
+  }
+
+  td {
+    width:100% !important;
+  }
+
+  td img {
+    width:100%;
+  }
+}
 
 
 
