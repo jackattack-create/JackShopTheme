@@ -76,6 +76,12 @@
   
 }
 
+@media (max-width: 750px) {
+  .img-textBlock {
+    text-align:center;
+  }
+}
+
 .wavy-blog-container {
   width: 100%;
   display: flex;

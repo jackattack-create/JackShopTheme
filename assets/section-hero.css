@@ -34,6 +34,14 @@
   text-align: center;
 }
 
+@media (max-width:750px) {
+  .hero-container h4,
+  .hero-container h1 {
+    font-size:5rem;
+    max-width: 500px;
+  }
+}
+
 .hero-side-text {
   width: 50%; 
   text-align: start; 

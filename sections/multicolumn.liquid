@@ -68,26 +68,27 @@
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
       <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
       {%- endif -%}
-    </div>
-    <h4 style="
-                  {%- if section.settings.text_align == 'center' -%}
+      <h4 
+      
+      style=" {%- if section.settings.text_align == 'center' -%}
                   text-align: center; 
-                 {%- endif -%}
-
+                  {%- endif -%}
+                  
                   {%- if section.settings.text_align == 'left' -%}
-                    text-align: left; 
+                  text-align: left; 
                   {%- endif -%}
-
+                  
                   {%- if section.settings.text_align == 'right' -%}
-                   text-align: right; 
+                  text-align: right; 
                   {%- endif -%}
-
-                  margin: 1.5rem 50px;"
+                  
+                  margin: 0 50px;"
                 >
                 {{ section.settings.subTitle | escape }}
               </h4>
-    <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col {% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop {% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet {% elsif section.blocks.size == 3 and section.settings.image_width != 'full' %} grid--3-col-tablet grid--3-col-desktop{% elsif section.blocks.size == 3 and section.settings.image_width == 'full' %}grid--3-col-tablet{% else %} grid--4-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
+            </div>
+              <slider-component class="slider-mobile-gutter">
+                <ul class="multicolumn-list grid grid--1-col {% if section.blocks.size > 4 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop {% elsif section.blocks.size > 4 and section.settings.image_width == 'full' %} grid--4-col-tablet {% elsif section.blocks.size == 3 and section.settings.image_width != 'full' %} grid--3-col-tablet grid--3-col-desktop{% elsif section.blocks.size == 3 and section.settings.image_width == 'full' %}grid--3-col-tablet{% else %} grid--4-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
         
