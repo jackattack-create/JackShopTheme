@@ -22,11 +22,11 @@
         {%- endif -%}
 
         {%- if section.settings.wave_padding_top == true -%}
-            margin-top: 150px;
+            padding-top: 150px;
         {%- endif -%}
 
         {%- if section.settings.wave_padding_bottom == true -%}
-            margin-bottom: 150px;
+            padding-bottom: 150px;
         {%- endif -%}
       "
 >
@@ -122,24 +122,23 @@
                 "label": "Cover"
               }
             ]
+          }, 
+          {
+            
+            "type": "checkbox",
+            "id": "wave_padding_bottom",
+            "label": "Wave Padding Bottom",
+            "default": false
           
-        }, 
+        },
         {
           
           "type": "checkbox",
-          "id": "wave_padding_bottom",
-          "label": "Wave Padding Bottom",
+          "id": "wave_padding_top",
+          "label": "Wave Padding Top",
           "default": false
         
-      },
-      {
-        
-        "type": "checkbox",
-        "id": "wave_padding_top",
-        "label": "Wave Padding Top",
-        "default": false
-      
-      }
+        }
       ],
       "presets": [ 
            { "name": "Hero" } 
@@ -228,7 +227,7 @@
             
             }
           ]
-        },
+        }
         
     ] 
     
