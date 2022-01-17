@@ -196,8 +196,8 @@ html.no-js .no-js-hidden {
     padding: 0 10rem;
   }
 
-  header .page-width {
-    padding: 0 5rem;
+  header.page-width {
+    padding: 2rem 5rem;
   }
 
   .page-width--narrow {
