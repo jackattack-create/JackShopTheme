@@ -106,10 +106,10 @@
                         <img src={{block.settings.wavy_article.image.src | img_url: 'large'}} />
                         <div class="img-textBlock">
                             <h2>{{block.settings.wavy_article.title}}</h2>
-                            {%- if article.excerpt != blank -%}       
-                                <p>{{article.excerpt | strip_html | truncatewords: 30}}</p>
-                            {%- elsif article.excerpt == blank -%}  
-                                <p>{{article.content | strip_html | truncatewords: 30}}</p>
+                            {%- if block.settings.wavy_article.excerpt != blank -%}       
+                                <p>{{block.settings.wavy_article.excerpt | strip_html | truncatewords: 30}}</p>
+                            {%- elsif article.block.settings.wavy_article.excerpt == blank -%}  
+                                <p>{{article.block.settings.wavy_article.content | strip_html | truncatewords: 30}}</p>
                             {%- endif -%}  
                             <button class="kimbalaButton" >
                                <a href="{{block.settings.wavy_article.url}}"> READ ON >>> </a>
