@@ -845,6 +845,10 @@ summary::-webkit-details-marker {
   margin: 3rem 0 2rem;
 }
 
+@media (max-width: 750px) {
+
+}
+
 .title-wrapper-with-link .title {
   margin: 0;
 }
@@ -865,6 +869,9 @@ summary::-webkit-details-marker {
   margin: 4rem 0 3rem;
   flex-wrap: wrap;
 }
+
+
+
 
 .title--primary {
   margin: 4rem 0;
