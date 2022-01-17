@@ -20,6 +20,14 @@
         {%- elsif section.settings.background_img_style == 'cover' -%}
           background-size:cover;
         {%- endif -%}
+
+        {%- if section.settings.wave_padding_top == true -%}
+            margin-top: 150px;
+        {%- endif -%}
+
+        {%- if section.settings.wave_padding_bottom == true -%}
+            margin-bottom: 150px;
+        {%- endif -%}
       "
 >
   {%- for block in section.blocks -%}
@@ -204,7 +212,23 @@
             
             }
           ]
-        }
+        },
+        {
+          
+            "type": "checkbox",
+            "id": "wave_padding_bottom",
+            "label": "Wave Padding Bottom",
+            "default": false
+          
+        },
+        {
+          
+          "type": "checkbox",
+          "id": "wave_padding_top",
+          "label": "Wave Padding Top",
+          "default": false
+        
+      }
     ] 
     
 } 
