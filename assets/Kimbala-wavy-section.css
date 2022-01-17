@@ -79,6 +79,7 @@
 @media (max-width: 750px) {
   .img-textBlock {
     text-align:center;
+    padding: 20px 0 50px;
   }
 }
 
