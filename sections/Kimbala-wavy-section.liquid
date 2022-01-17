@@ -80,7 +80,7 @@
 
                 {%- when 'blog' -%}
                 <div class="wavy-blog-container"> 
-                    {%- for article in block.settings.wavy_blog.articles limit: 6 -%}
+                    {%- for article in block.settings.wavy_blog.articles limit: 3 -%}
                     
                         <div class="wavy-blog">
                             <a href="{{article.url}}">

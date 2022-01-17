@@ -2,9 +2,9 @@
     <details open>
       <summary>
         <div class="summary__title" style="display:flex; justify-content: space-between;">
-          <h2 class="h4 accordion__title">
+          <h4 class="h4 accordion__title">
            <b> PRODUCT INFORMATION </b>
-          </h2>
+          </h4>
           <span>-</span>
         </div>
       </summary>
@@ -68,10 +68,12 @@
         </div>
       </div>
       {%- endif -%}
+      {%- if product.metafields.my_fields.pairings != blank  -%}
       <div class="secondary-prod-info">
         <p><b><i>Pair With:</i></b></p>
         <p>{{product.metafields.my_fields.pairings}}</p>
       </div>
+      {%- endif -%}
     </div>
     
     </details>
