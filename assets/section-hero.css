@@ -3,7 +3,7 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
 
   padding:100px 5rem;
 
@@ -37,7 +37,7 @@
 @media (max-width:750px) {
   .hero-container h4,
   .hero-container h1 {
-    font-size:5rem;
+    font-size:3rem;
     max-width: 500px;
   }
 }
