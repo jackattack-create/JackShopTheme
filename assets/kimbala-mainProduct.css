@@ -32,7 +32,6 @@ div.wavySection {
 }
 
 .icon-box {
-  max-height: 100px;
   width: 80px;
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@ div.wavySection {
 }
 
 .icon {
-  width: 50px;
+  width: 80px;
 }
 
 .icon-box h4 {
