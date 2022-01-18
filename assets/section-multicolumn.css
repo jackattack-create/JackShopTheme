@@ -1,11 +1,11 @@
 .multicolumn .title {
   margin: 0;
-  max-width: 30rem;
+  max-width: 50rem;
 }
 
 @media (max-width: 780px) {
   .multicolumn .title {
-    max-width:30rem;
+    max-width: 30rem;
   }
 }
 
