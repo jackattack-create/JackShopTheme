@@ -22,6 +22,7 @@ input.kimbalaButton {
 
     border-radius: 5px;
     width: 15rem;
+    margin-bottom: 15px;
 }
 
 button.kimbalaButton a{
