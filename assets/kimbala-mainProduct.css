@@ -119,15 +119,18 @@ div.wavySection {
 }
 
 @media screen and (max-width: 749px)  {
-  .desktop-visible {
+  .desktop-visible-acccordian {
     display: none;
+    
   }
+
+
 
   .mobile-visible {
     display: flex;
   }
 
-  .mobile-visible-accordian {
+  .mobile-visible-accoridan {
     display: flex;
     flex-direction: column;
   }
@@ -138,11 +141,16 @@ div.wavySection {
     display: flex;
   }
 
-  .mobile-visible {
+  .desktop-visible-acccordian {
+    display: flex;
+    flex-direction:column;
+  }
+
+  .mobile-visible-accoridan {
     display: none;
   }
 
-  .mobile-visible-accordian {
+  .mobile-visible-accoridan {
     display: none;
   }
 }

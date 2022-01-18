@@ -14,14 +14,6 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  
-{%- endstyle -%}
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
@@ -100,7 +92,7 @@
           {{ 'products.product.xr_button' | t }}
         </button>
       {%- endif -%}
-      <div class="accordian-tab-div desktop-visible" style="margin-top: 20px;">
+      <div class="desktop-visible-acccordian" style="margin-top: 20px;">
         {%- render 'product-info' -%}
         {%- render 'shipping-info' -%}
       </div>
@@ -530,7 +522,7 @@
   {%- endfor -%}
 </section>
 
-<div class="mobile-visible-accoridan" style=" margin-top: 20px;">
+<div class="mobile-visible-accoridan page-width" style=" margin-top: 20px;">
   {%- render 'product-info' -%}
   {%- render 'shipping-info' -%}
 </div>
