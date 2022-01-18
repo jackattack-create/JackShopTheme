@@ -36,8 +36,15 @@ div.wavySection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   padding-right: 10px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 980px) {
+  .icon-box {
+    align-items: flex-start;
+  }
 }
 
 .icon {
