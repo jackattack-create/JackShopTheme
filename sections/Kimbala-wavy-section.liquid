@@ -83,7 +83,7 @@
                     {%- for article in block.settings.wavy_blog.articles limit: 6 -%}
                     
                         <div class="wavy-blog">
-                            <a href="{{ article.link }}">
+                            <a href="{{ blog.article.url }}">
                                 <img src="{{ article.image.src | img_url: 'large' }}" />
                             </a>
                         <i><h3 style="color: {{section.settings.wavySectionTextColor}};">{{article.title}}</h3></i>
