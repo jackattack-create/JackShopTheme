@@ -1,80 +1,356 @@
-<div id="generated-article-liquid">
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-wavy-section.css' | asset_url | stylesheet_tag }}
+{{ 'Kimbala-universal-assets.css' | asset_url | stylesheet_tag }}
+{{ 'kimbala-blog-post.css' | asset_url | stylesheet_tag }}
 
-<!-- Article -->
-<div class="article">
-  <h2 class="article-title">{{ article.title }}</h2>
-  <p class="article-details">posted <span class="article-time">{{ article.created_at | date: "%Y %h" }}</span> by <span class="article-author">{{ article.author }}</span></p>
-
-  <div class="article-body textile">
-    {{ article.content }}
-  </div>    
-
-</div>
-<!-- END Article -->
-
-<!-- Comments -->
-{% if blog.comments_enabled? %}
-<div id="comments">
-  <h3>Comments</h3>
-  
-  <!-- List all comments -->
-  <ul id="comment-list">
-  {% for comment in article.comments %}
-    <li>
-      <div class="comment">
-        {{ comment.content }}
-      </div>
-      
-  	  <div class="comment-details">
-  		  Posted by <span class="comment-author">{{ comment.author }}</span> on <span class="comment-date">{{ comment.created_at | date: "%B %d, %Y" }}</span>
-      </div>
-  	</li>
-  {% endfor %}
-  </ul>
-  
-  <!-- Comment Form -->
-  <div id="comment-form">
-  {% form article %}
-    <h3>Leave a comment</h3>
-    
-    <!-- Check if a comment has been submitted in the last request, and if yes display an appropriate message -->
-    {% if form.posted_successfully? %}
-      {% if blog.moderated? %}
-        <div class="notice">
-          Successfully posted your comment.<br />
-          It will have to be approved by the blog owner first before showing up.
+<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div class="page-width page-width--narrow">
+          {% render block %}
         </div>
-      {% else %}
-        <div class="notice">Successfully posted your comment.</div>
-      {% endif %}
-    {% endif %}
-    
-    {% if form.errors %}
-      <div class="notice error">Not all the fields have been filled out correctly!</div>
-    {% endif %}
-    
-    <dl>
-      <dt class="{% if form.errors contains 'author' %}error{% endif %}"><label for="comment_author">Your name</label></dt>
-      <dd><input type="text" id="comment_author" name="comment[author]" size="40" value="{{form.author}}" class="{% if form.errors contains 'author' %}input-error{% endif %}" /></dd>
+      {%- when 'featured_image'-%}
+        {%- if article.image -%}
+          <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+            <div class="article-template__hero-{{ block.settings.image_height }} media"
+              itemprop="image"
+              {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
+            >
+              <img
+                srcset="{% if article.image.width >= 350 %}{{ article.image | img_url: '350x' }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | img_url: '750x' }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | img_url: '1100x' }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | img_url: '1500x' }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | img_url: '2200x' }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | img_url: '3000x' }} 3000w,{% endif %}
+                  {{ article.image | img_url: 'master' }} {{ article.image.width }}w"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                src="{{ article.image | img_url: '1100x' }}"
+                loading="lazy"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                alt="{{ article.image.alt | escape }}">
+            </div>
+          </div>
+        {%- endif -%}
 
-      <dt class="{% if form.errors contains 'email' %}error{% endif %}"><label for="comment_email">Your email</label></dt>
-      <dd><input type="text" id="comment_email" name="comment[email]" size="40" value="{{form.email}}" class="{% if form.errors contains 'email' %}input-error{% endif %}" /></dd>
+        {%- when 'Kimbala_blog_hero' -%}
+          <div class="hero-container" style="background-image: url({{ article.image | img_url: 'large', crop: 'center' }});">
+            <nav 
+              class="hero-nav"
+              {%-  if blog.previous_article == blank -%}
+                style="justify-content: flex-end;"
+              {%- endif -%}
+            >
+              
+              
+                    <a href="{{blog.previous_article}}">
+                      {%- unless blog.previous_article == blank -%}
+                        < PREVIOUS ARTICLE
+                      {%- endunless -%}
+                    </a>
+                  
+                  {%- unless blog.next_article == blank -%}
+                    <a href="{{blog.next_article}}">
+                      NEXT ARTICLE >
+                    </a>
+                  {%- endunless -%}
+            </nav>
+            <div class="hero-text-container">
+              <b><h2>{{article.title}}</h2></b>
+             
+            </div>
+          </div>
+          
+          <div class="wavySection" style="margin-top: -100px; margin-bottom: -100px; padding-bottom:100px;">
+            <div>
+              <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{block.settings.blog_wave_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+            </div>
+            <div class="wavyBody" style="background-color: {{block.settings.blog_wave_color}};">
+              <h2>{{article.published_at | date: "%b %d, %y" }} / {{article.author}}</h2>
+              <p>
+                {{article.excerpt}}
+              </p>
+            </div>
+            <div>
+              <svg style="display:block; " class="wavyWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 148.18"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{block.settings.blog_wave_color}};" class="cls-1" d="M1920,0V96.32s-510.38-113.69-968.14,0C482,213,0,96.32,0,96.32V0Z"/></g></g></svg>
+            </div>
+          </div>
 
-      <dt class="{% if form.errors contains 'body' %}error{% endif %}"><label for="comment_body">Your comment</label></dt>
-      <dd><textarea id="comment_body" name="comment[body]" cols="40" rows="5" class="{% if form.errors contains 'body' %}input-error{% endif %}">{{form.body}}</textarea></dd>
-    </dl>
-    
-    {% if blog.moderated? %}
-      <p class="hint">comments have to be approved before showing up</p>
-    {% endif %}    
+        
+          
+        {%- when 'title'-%}
+          <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+            {%- if block.settings.blog_show_date -%}
+              <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if block.settings.blog_show_author -%}
+              <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ article.author }}</span>
+              </span>
+            {%- endif -%}
+          </header>
 
-    <input type="submit" value="Post comment" id="comment-submit" />
-  {% endform %}
-  </div>
-  <!-- END Comment Form -->
+        {%- when 'content'-%}
+          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }} style="padding: 0 5rem 180px;">
+              {{ article.content }}
+          </div>
+
+        {%- when 'share' -%}
+          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+            <share-button class="share-button" {{ block.shopify_attributes }}>
+              <button class="share-button__button hidden">
+                {% render 'icon-share' %}
+                {{ block.settings.share_label | escape }}
+              </button>
+              <details id="Details-{{ block.id }}-{{ section.id }}">
+                <summary class="share-button__button">
+                  {% render 'icon-share' %}
+                  {{ block.settings.share_label | escape }}
+                </summary>
+                <div id="Article-share-{{ section.id }}" class="share-button__fallback motion-reduce">
+                  <div class="field">
+                    <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
+                    </span>
+                    <input type="text"
+                          class="field__input"
+                          id="url"
+                          value="{{ shop.url | append: article.url }}"
+                          placeholder="{{ 'general.share.share_url' | t }}"
+                          onclick="this.select();"
+                          readonly
+                    >
+                    <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
+                  </div>
+                  <button class="share-button__close hidden no-js-hidden">
+                    {% render 'icon-close' %}
+                    <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
+                  </button>
+                  <button class="share-button__copy no-js-hidden">
+                    {% render 'icon-clipboard' %}
+                    <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
+                  </button>
+                </div>
+              </details>
+            </share-button>
+            <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+          </div>
+
+          {%- when 'footer' -%}
+          <div class="footer-container">
+          
+            <div class="wavySection">
+              <div>
+                <svg class="wavyWave"style="display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 126.25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path style="fill: {{block.settings.blog_wave_color}};" class="cls-1" d="M1920,60.12v66.13H0V60.12s510.38,131.8,968.14,0C1438-75.16,1920,60.12,1920,60.12Z"/></g></g></svg>
+              </div>
+              <div class="wavyBody" style="background-color: {{block.settings.blog_wave_color}};">
+                <h2>Shop This Recipie</h2>
+                <nav class="blog-footer-nav">
+                  {%- unless blog.previous_article == blank -%}
+                    <a href="{{blog.previous_article}}">
+                      < PREVIOUS ARTICLE
+                    </a>
+                  {%- endunless -%}
+                  {%- unless blog.next_article == blank -%}
+                    <a href="{{blog.next_article}}">
+                      NEXT ARTICLE >
+                    </a>
+                  {%- endunless -%}
+                </nav>
+              </div>
+            </div>
+          </div>
+          </div>
+
+    {%- endcase -%}
+  {%- endfor -%}
+
   
-</div>
-{% endif %}
-<!-- END Comments -->
+  {%- if blog.comments_enabled? -%}
+    <div class="article-template__comment-wrapper background-secondary">
+      <div id="comments" class="page-width page-width--narrow">
+        {%- if article.comments_count > 0 -%}
+          {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-</div>
+          <h2 id="Comments-{{ article.id }}" tabindex="-1">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
+          {% paginate article.comments by 5 %}
+            <div class="article-template__comments">
+              {%- if comment.status == 'pending' and comment.content -%}
+                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                  {{ comment.content }}
+                  <footer class="right">
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
+                  </footer>
+                </article>
+              {%- endif -%}
+
+              {%- for comment in article.comments -%}
+                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                  {{ comment.content }}
+                  <footer class="right">
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'date' }}</span>
+                  </footer>
+                </article>
+              {%- endfor -%}
+              {% render 'pagination', paginate: paginate, anchor: anchorId %}
+            </div>
+          {% endpaginate %}
+        {%- endif -%}
+        {% form 'new_comment', article %}
+          {%- liquid
+            assign post_message = 'blogs.article.success'
+            if blog.moderated? and comment.status == 'unapproved'
+              assign post_message = 'blogs.article.success_moderated'
+            endif
+          -%}
+          <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
+          {%- if form.errors -%}
+            <div class="form__message" role="alert">
+              <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
+                {% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}
+              </h3>
+            </div>
+            <ul class="form-status-list caption-large">
+              {%- for field in form.errors -%}
+                <li>
+                  <a href="#CommentForm-{{ field }}" class="link">
+                    {%- if form.errors.translated_fields[field] contains 'author' -%}
+                      {{ 'blogs.article.name' | t }}
+                    {%- elsif form.errors.translated_fields[field] contains 'body'-%}
+                     {{ 'blogs.article.message' | t }}
+                    {%- else -%}
+                      {{ form.errors.translated_fields[field] }}
+                    {%- endif -%}
+                    {{ form.errors.messages[field] }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- elsif form.posted_successfully? -%}
+            <div class="form-status-list form__message" role="status">
+              <h3 class="form-status" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
+            </div>
+          {%- endif -%}
+
+          <div {% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
+            <div class="article-template__comment-fields">
+              <div class="field field--with-error">
+                <input
+                  type="text"
+                  name="comment[author]"
+                  id="CommentForm-author"
+                  class="field__input"
+                  autocomplete="name"
+                  value="{{ form.author }}"
+                  aria-required="true"
+                  {% if form.errors contains 'author' %}
+                    aria-invalid="true"
+                    aria-describedby="CommentForm-author-error"
+                  {% endif %}
+                  placeholder="{{ 'blogs.article.name' | t }}"
+                >
+                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                {%- if form.errors contains 'author' -%}
+                  <small id="CommentForm-author-error">
+                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                  </small>
+                {%- endif -%}
+              </div>
+              <div class="field field--with-error">
+                <input
+                  type="email"
+                  name="comment[email]"
+                  id="CommentForm-email"
+                  autocomplete="email"
+                  class="field__input"
+                  value="{{ form.email }}"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="CommentForm-email-error"
+                  {% endif %}
+                  placeholder="{{ 'blogs.article.email' | t }}"
+                >
+                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
+                {%- if form.errors contains 'email' -%}
+                  <small id="CommentForm-email-error">
+                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                  </small>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="field field--with-error">
+              <textarea
+                rows="5"
+                name="comment[body]"
+                id="CommentForm-body"
+                class="text-area field__input"
+                aria-required="true"
+                {% if form.errors contains 'body' %}
+                  aria-invalid="true"
+                  aria-describedby="CommentForm-body-error"
+                {% endif %}
+                placeholder="{{ 'blogs.article.message' | t }}"
+              >{{ form.body }}</textarea>
+                <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
+            </div>
+            {%- if form.errors contains 'body' -%}
+              <small id="CommentForm-body-error">
+                <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+              </small>
+            {%- endif -%}
+          </div>
+          {%- if blog.moderated? -%}
+            <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
+          {%- endif -%}
+          <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
+        {% endform %}
+      </div>
+  </div>
+  {%- endif -%}
+</article>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ shop.url | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      {% assign image_size = article.image.width | append: 'x' %}
+      "image": [
+        {{ article | img_url: image_size | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        {% assign image_size = settings.share_image.width | append: 'x' %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | img_url: image_size | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+</script>
