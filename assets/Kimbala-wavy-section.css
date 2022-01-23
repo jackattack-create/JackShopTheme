@@ -41,6 +41,7 @@ svg.wavyWave {
 @media screen and (max-width: 750px){
     svg.wavyWave {
     	display: block;
+      position: absolute;
       	
   	}
 }
