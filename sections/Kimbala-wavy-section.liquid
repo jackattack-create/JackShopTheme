@@ -83,8 +83,8 @@
                     {%- for article in block.settings.wavy_blog.articles limit: 6 -%}
                     
                         <div class="wavy-blog">
-                            <a href="{{article.blog.url}}">
-                                <img src="{{article.image.src | img_url: 'large'}}" />
+                            <a href="{{ article.url }}">
+                                <img src="{{ article.image.src | img_url: 'large' }}" />
                             </a>
                         <i><h3 style="color: {{section.settings.wavySectionTextColor}};">{{article.title}}</h3></i>
                          {%- if article.excerpt != blank -%}       
@@ -103,7 +103,7 @@
                 {%- when 'article' -%} 
                 
                     <div class="fullWavyImgTextPair" style="height: 100%;">
-                        <img src={{block.settings.wavy_article.image.src | img_url: 'large'}} />
+                        <img src={{ block.settings.wavy_article.image.src | img_url: 'large'}} />
                         <div class="img-textBlock">
                             <h2>{{block.settings.wavy_article.title}}</h2>
                             {%- if block.settings.wavy_article.excerpt != blank -%}       
@@ -112,7 +112,7 @@
                                 <p>{{block.settings.wavy_article.content | strip_html | truncatewords: 30}}</p>
                             {%- endif -%}  
                             <button class="kimbalaButton" >
-                               <a href="{{block.settings.wavy_article.url}}"> READ ON >>> </a>
+                               <a href="{{ block.settings.wavy_article.url }}"> READ ON >>> </a>
                             </button>
                         </div>
                     </div>
