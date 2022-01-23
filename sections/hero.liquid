@@ -12,6 +12,8 @@
         
         {%- elsif section.settings.text_position == 'middle' -%}
           justify-content: center;
+         {%- elsif section.settings.text_position == 'bottom' -%}
+             justify-content: flex-end;
         {%- endif -%}
 
         
@@ -103,6 +105,10 @@
               {
                 "value": "middle",
                 "label": "Middle"
+              },
+{
+                "value": "bottom",
+                "label": "Bottom"
               }
             ]
         },
