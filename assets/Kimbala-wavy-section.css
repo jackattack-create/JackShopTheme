@@ -39,8 +39,8 @@ svg.wavyWave {
 
 @media screen and (max-width: 750px){
     svg.wavyWave {
-    	display: inline-block;
-      	vertical-align:top;
+    	display: block;
+      	
   	}
 }
 
