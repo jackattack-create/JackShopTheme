@@ -36,7 +36,7 @@
         {%- endif -%}
 
         {%- when 'Kimbala_blog_hero' -%}
-          <div class="hero-container" style="background-image: url({{ article.image | img_url: 'large' }});">
+          <div class="hero-container" style="background-image: url({{ article.image | img_url: 'medium' }});">
             <nav 
               class="hero-nav"
               {%-  if blog.previous_article == blank -%}
