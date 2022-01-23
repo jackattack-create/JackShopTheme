@@ -28,6 +28,10 @@
   line-height: 1.3;
 }
 
+.wavySection {
+  display:block;
+}
+
 
 
 svg.wavyWave {
