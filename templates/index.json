@@ -1,106 +1,200 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+    "16425367700fed50c0": {
+      "type": "hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "d18a3e1b-31ff-4a9c-8ae2-4dbea78669cf": {
+          "type": "text",
           "settings": {
-            "heading": "Talk about your brand"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_label_2": ""
+            "hero_img_header": "Authentic Ready-to-Drink Chai, Made Easy",
+            "textSide": "right",
+            "titleType": "large",
+            "hero_img_text": "",
+            "text_color_id": "#333333"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ]
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading"
-        },
-        "text": {
-          "type": "text"
-        },
-        "button": {
-          "type": "button"
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
-    },
-    "featured_products": {
-      "type": "featured-collection",
+        "d18a3e1b-31ff-4a9c-8ae2-4dbea78669cf"
+      ],
       "settings": {
-        "title": "Featured products",
-        "collection": "all",
-        "image_ratio": "square"
+        "image_bg": "shopify:\/\/shop_images\/Kimbala_Landing.png",
+        "text_position": "middle",
+        "background_img_style": "cover",
+        "wave_padding_bottom": true,
+        "wave_padding_top": false
       }
     },
-    "collage": {
-      "type": "collage",
+    "16425367679733cf2c": {
+      "type": "Kimbala-wavy-section",
       "blocks": {
-        "video": {
-          "type": "video"
+        "2d3aa59b-4312-418c-9aae-8076ad29805b": {
+          "type": "header",
+          "settings": {
+            "section_title": "CHAI DONE RIGHT",
+            "header_text_color": "#ffffff"
+          }
         },
-        "product": {
-          "type": "product"
+        "85237551-f06d-440d-8161-693c7e12de34": {
+          "type": "copy",
+          "settings": {
+            "wavy_content_richtext": "<p>Authentic chai is nearly impossible to find. Most brands load their chai recipes with sugars, preservatives, and heavy spices. This dilutes the robust tea flavor and careful balance of spices found in proper chai. <\/p><p><\/p><p>With Kimbala, it’s easy to experience the same kind of authentic, fresh chai that you would find in India - without the additives. Each Kimbala beverage and concentrate is freshly brewed in small batches and conveniently delivered to your door, ready to drink.<\/p><p><\/p>",
+            "text_align": "center"
+          }
         },
-        "collection": {
-          "type": "collection"
+        "0c656604-db9b-46a2-b775-1aca120593d9": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop Now",
+            "button_link": "shopify:\/\/collections\/beverages-live"
+          }
         }
       },
       "block_order": [
-        "video",
-        "product",
-        "collection"
-      ]
-    },
-    "video": {
-      "type": "video"
+        "2d3aa59b-4312-418c-9aae-8076ad29805b",
+        "85237551-f06d-440d-8161-693c7e12de34",
+        "0c656604-db9b-46a2-b775-1aca120593d9"
+      ],
+      "settings": {
+        "wavySectionColor": "#cb916b",
+        "outward": true,
+        "bottomWave": false,
+        "wavySectionTextColor": "#ffffff"
+      }
     },
     "multi_column": {
       "type": "multicolumn",
       "blocks": {
         "column1": {
-          "type": "column"
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FiveStars.png",
+            "title": "",
+            "text": "<p>\"I was happily surprised with the quality of flavors. The chai concentrate mixed with coconut almond milk was my daily morning go-to.\"<br\/><br\/>JC L. | 12.24.2020<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         },
         "column2": {
-          "type": "column"
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FiveStars.png",
+            "title": "",
+            "text": "<p>\"I have purchased and tasted various brand of chai. This is by far the best chai that makes my palate go ooo-la-la.”<\/p><p><br\/><br\/>Shelley C. | 03.22.21<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         },
         "column3": {
-          "type": "column"
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FiveStars.png",
+            "title": "",
+            "text": "<p>\"Loved the change to taste all your products - problem is picking a favorite - and that is not easily solved - they are ALL super delish!!\"<\/p><p><br\/><br\/>Patricia G. | 06.20.21<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column1",
         "column2",
         "column3"
-      ]
+      ],
+      "settings": {
+        "italicized": true,
+        "title": "Don't Just take Our Word For It...",
+        "subTitle": "",
+        "header_color": "#ffffff",
+        "text_align": "left",
+        "heading_size": "medium",
+        "bg_img": "shopify:\/\/shop_images\/Asset_11.png",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "secondary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true,
+        "wavePageContent": true,
+        "wavySectionColor": "#ffcccc"
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "all",
+        "products_to_show": 6,
+        "show_view_all": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "button_color": "#ffffff",
+        "button_text_color": "#111111"
+      }
+    },
+    "1642539696d37acede": {
+      "type": "Kimbala-wavy-section",
+      "blocks": {
+        "d9e13d2a-59c5-4aa7-ac8d-6cfda1e87e56": {
+          "type": "article",
+          "settings": {
+            "wavy_article": "chai-101\/what-is-jaggery-the-full-guide-to-jaggery-sugar"
+          }
+        }
+      },
+      "block_order": [
+        "d9e13d2a-59c5-4aa7-ac8d-6cfda1e87e56"
+      ],
+      "settings": {
+        "wavySectionColor": "#ffffff",
+        "outward": false,
+        "bottomWave": true,
+        "wavySectionTextColor": "#111111"
+      }
+    },
+    "16425411956aae53c1": {
+      "type": "multicolumn",
+      "settings": {
+        "italicized": false,
+        "title": "Keeping up with Kimbala",
+        "subTitle": "FOLLOW US @I_Kimbala",
+        "header_color": "#111111",
+        "text_align": "center",
+        "heading_size": "small",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false,
+        "wavePageContent": true,
+        "wavySectionColor": "#f3f3f3"
+      }
+    },
+    "16428947861b499093": {
+      "type": "instafeed",
+      "settings": {
+        "heading_font": "helvetica_n4",
+        "heading_size": 20,
+        "feed_width": 80,
+        "html_area": "<style>\n#insta-feed {\nmargin-top: -70px;\nmargin-bottom:100px;\n}\n<\/style>"
+      }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
+    "16425367700fed50c0",
+    "16425367679733cf2c",
+    "multi_column",
     "featured_products",
-    "collage",
-    "video",
-    "multi_column"
+    "1642539696d37acede",
+    "16425411956aae53c1",
+    "16428947861b499093"
   ]
 }
