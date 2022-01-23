@@ -3,38 +3,93 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
+        "79119c22-562d-4147-b4dd-467d0f88f044": {
+          "type": "Kimbala_blog_hero",
           "settings": {
+            "blog_wave_color": "#fff"
           }
         },
         "title": {
           "type": "title",
           "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-          }
         }
       },
       "block_order": [
-        "featured_image",
+        "79119c22-562d-4147-b4dd-467d0f88f044",
         "title",
         "share",
         "content"
       ],
       "settings": {
       }
+    },
+    "16429153502b58a6f5": {
+      "type": "Kimbala-wavy-section",
+      "blocks": {
+        "9d75c413-d91d-45ab-9b76-769fb9eaec80": {
+          "type": "header",
+          "settings": {
+            "section_title": "Product of the Week",
+            "header_text_color": "#333"
+          }
+        },
+        "35d287d0-aa03-4158-9c3c-c46af1e89789": {
+          "type": "productLink",
+          "settings": {
+            "wavy_title": "Shop This Article",
+            "product": "coffee-neat"
+          }
+        }
+      },
+      "block_order": [
+        "9d75c413-d91d-45ab-9b76-769fb9eaec80",
+        "35d287d0-aa03-4158-9c3c-c46af1e89789"
+      ],
+      "settings": {
+        "wavySectionColor": "#ffcccc",
+        "outward": true,
+        "bottomWave": false,
+        "wavySectionTextColor": "#121212"
+      }
+    },
+    "1642915425c75d8865": {
+      "type": "Kimbala-wavy-section",
+      "blocks": {
+        "cf7497b0-adc3-4fbf-bdbf-4c736943a13b": {
+          "type": "blog",
+          "settings": {
+            "wavy_blog": "chai-101"
+          }
+        }
+      },
+      "block_order": [
+        "cf7497b0-adc3-4fbf-bdbf-4c736943a13b"
+      ],
+      "settings": {
+        "wavySectionColor": "#cb916b",
+        "outward": true,
+        "bottomWave": false,
+        "wavySectionTextColor": "#111111"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16429153502b58a6f5",
+    "1642915425c75d8865"
   ]
 }
