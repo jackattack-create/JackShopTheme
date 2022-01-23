@@ -36,7 +36,12 @@
         {%- endif -%}
 
         {%- when 'Kimbala_blog_hero' -%}
-          <div class="hero-container" style="background-image: url({{ article.image | img_url: 'large', crop: 'center' }});">
+          <div class="hero-container" style="background-image: url({% if article.image.width >= 350 %}{{ article.image | img_url: '350x' }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | img_url: '750x' }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | img_url: '1100x' }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | img_url: '1500x' }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | img_url: '2200x' }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | img_url: '3000x' }} 3000w,{% endif %});">
             <nav 
               class="hero-nav"
               {%-  if blog.previous_article == blank -%}
