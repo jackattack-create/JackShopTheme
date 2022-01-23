@@ -33,12 +33,12 @@
   position: relative;
 }
 
-.wavyWave svg {
+svg.wavyWave {
   display: block;
 }
 
 @media screen and (max-width: 750px){
-    .wavyWave svg {
+    svg.wavyWave {
     	display: inline-block;
       	vertical-align:top;
   	}
