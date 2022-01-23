@@ -33,6 +33,10 @@
   position: relative;
 }
 
+.wavyWave svg {
+  display: block;
+}
+
 
 
 .WavyImgTextPair {
