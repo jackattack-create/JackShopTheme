@@ -37,6 +37,12 @@
   display: block;
 }
 
+@media screen and (max-width: 750px){
+    .wavyWave svg {
+    	display: inline-block;
+      	vertical-align:top;
+  	}
+}
 
 
 .WavyImgTextPair {
