@@ -28,9 +28,7 @@
   line-height: 1.3;
 }
 
-.wavySection {
-  display:block;
-}
+
 
 
 
@@ -41,7 +39,6 @@ svg.wavyWave {
 @media screen and (max-width: 750px){
     svg.wavyWave {
     	display: block;
-      position: relative;
       	
   	}
 }
