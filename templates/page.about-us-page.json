@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "wavePageContent": false,
+        "wavySectionColor": "#ffcccc",
+        "pageSubTitle": "",
+        "subtitleType": "subTitleLarge"
+      }
+    },
+    "164254152527dae724": {
+      "type": "hero",
+      "blocks": {
+        "132a88b8-cef6-4b05-bf82-d728cb1bae1a": {
+          "type": "heading",
+          "settings": {
+            "rich_text": "Welcome!",
+            "big_text": "We're Glad You're Here...",
+            "header_color_id": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "132a88b8-cef6-4b05-bf82-d728cb1bae1a"
+      ],
+      "settings": {
+        "image_bg": "shopify:\/\/shop_images\/hero-img.png",
+        "text_position": "middle",
+        "background_img_style": "fill",
+        "wave_padding_bottom": false,
+        "wave_padding_top": false
+      }
+    },
+    "164254162131721bc8": {
+      "type": "rich-text",
+      "blocks": {
+        "164254162101b29da9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h1"
+          }
+        },
+        "164254162101b29da9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Being a native of India, Madhu grew up with chai as an integral part of daily life. When he moved to the United States in 2000, Madhu realized finding a proper chai was impossible. Thousands of coffee shops to choose from and not a single proper chai was served. Chai should be an experience that soothes the soul and celebrates the tea flavor; this experience did not exist in the United States like it did in India. <\/p><p>Madhu would always make a point to round up his chai supplies and bring them to friends’ homes during get-togethers, creating everlasting memories and conversations over homemade chai. This combination of being fed up there were no <em>GREAT<\/em> chai options, along with encouragement from friends to bottle his chai recipe, are the core reasons for creating Kimbala. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164254162101b29da9-0",
+        "164254162101b29da9-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "1642541690ab3046a3": {
+      "type": "Kimbala-wavy-section",
+      "blocks": {
+        "8965fc71-4296-4755-8546-a3854b36e5a4": {
+          "type": "description",
+          "settings": {
+            "wavy_title": "Kimbala Meaning",
+            "side_img": "shopify:\/\/shop_images\/Kimbala_3.png",
+            "description": "Kimbala is a Sanskrit word that translates to, “what is your strength” or “what strength do you possess”. When reflecting on strengths that drive everyday life, Madhu and his wife knew their strength stemmed from kindness. Let Kimbala inspire you to consider your own strengths and let them guide you through life’s journey.   Kimbala’s logo is a semicolon (“;”), an intention to pause and remind yourself of the strength you own and how you will use it. When you pause, you reflect and enjoy what\/who surrounds you. The elephant portion of our semicolon represents a strong but kind member of the animal kingdom, reminding once more of Kimbala’s “strength in kindness”.",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "8965fc71-4296-4755-8546-a3854b36e5a4"
+      ],
+      "settings": {
+        "wavySectionColor": "#ffffff",
+        "outward": false,
+        "bottomWave": true,
+        "wavySectionTextColor": "#111111"
+      }
+    },
+    "16425416942d6ef3aa": {
+      "type": "hero",
+      "blocks": {
+        "ded8b477-b342-4d94-9202-555c50f0034b": {
+          "type": "text",
+          "settings": {
+            "hero_img_header": "Sourced From",
+            "textSide": "left",
+            "titleType": "large",
+            "hero_img_text": "Kimbala coffee is selected from communities who grow in the Western Ghats (Nilgiris Mountains) in the state of Karnataka, India. These local families have passed on the culture of coffee through multiple generations, continuously perfecting their art.   Tea leaves for Kimbala chai products are sourced from select estates in the Assam region of Eastern India. This selection is based not only on overall quality of the estate but also, one that lives and breathes dedication to the processing of their tea leaves.  Premium spices are sourced from areas in India that specialize in the production.  Whether sourcing ingredients or producing Kimbala chai and coffee, Madhu achieves the highest quality possible to represent an authentic taste of India.",
+            "text_color_id": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "ded8b477-b342-4d94-9202-555c50f0034b"
+      ],
+      "settings": {
+        "image_bg": "shopify:\/\/shop_images\/Bottom_Background.png",
+        "mobile_bg": "shopify:\/\/shop_images\/Bottom_Background.png",
+        "text_position": "middle",
+        "background_img_style": "fill",
+        "wave_padding_bottom": false,
+        "wave_padding_top": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164254152527dae724",
+    "164254162131721bc8",
+    "1642541690ab3046a3",
+    "16425416942d6ef3aa"
+  ]
+}
