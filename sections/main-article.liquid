@@ -96,7 +96,7 @@
 
         {%- when 'content'-%}
           <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }} style="padding: 0 5rem 180px;">
-            <div style="display:flex; align-items: center;"> 
+            <div style="display:flex; align-items: center; justify-content: space-between;"> 
               <h4> Tags: </h4>
               {% for tag in article.tags %}
                <p style="padding: 0px 5px;"> {{ tag }} </p>
