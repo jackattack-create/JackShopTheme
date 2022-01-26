@@ -90,6 +90,9 @@
               <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ article.author }}</span>
               </span>
+            <p> {% for tag in article.tags %}
+                    {{ tag }}
+              {% endfor %} </p>
             {%- endif -%}
           </header>
 
