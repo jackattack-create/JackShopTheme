@@ -90,15 +90,16 @@
               <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ article.author }}</span>
               </span>
-            <p> {% for tag in article.tags %}
-                    {{ tag }}
-              {% endfor %} </p>
+            
             {%- endif -%}
           </header>
 
         {%- when 'content'-%}
           <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }} style="padding: 0 5rem 180px;">
-              {{ article.content }}
+             {% for tag in article.tags %}
+                    <p>{{ tag }}</p>
+              {% endfor %}   
+            {{ article.content }}
           </div>
 
         {%- when 'share' -%}
