@@ -96,9 +96,9 @@
 
         {%- when 'content'-%}
           <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }} style="padding: 0 5rem 180px;">
-             <p>{% for tag in article.tags %}
-                    {{ tag }}
-              {% endfor %}  </p>
+             <div>{% for tag in article.tags %}
+               <h4> {{ tag }} </h4>
+              {% endfor %}  </div>
                       
             {{ article.content }}
           </div>
