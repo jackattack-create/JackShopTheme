@@ -115,11 +115,7 @@
             <h1 class="product__title" {{ block.shopify_attributes }}>
               {{ product.title | escape }}
             </h1>
-       		 <div style="display:flex; align-items: center;">
-        	<h4> Tags: </h4>
-              {% for tag in product.tags %}
-               <p style="margin-left: 10px;"> {{ tag }} </p>
-              {% endfor %}  </div>
+       		 
         
 {% comment %}Start automatically added Judge.me widget{% endcomment %}
   <div class="product__text">
