@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "wavePageContent": false,
+        "wavySectionColor": "#f3f3f3",
+        "pageSubTitle": "",
+        "subtitleType": "subTitleLarge"
+      }
+    },
+    "1642543336916f329f": {
+      "type": "multicolumn",
+      "blocks": {
+        "1642543336921b95c0-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Royal_Blue.png",
+            "title": "",
+            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<br\/>1629 E. 6TH<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1642543336921b95c0-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_7.png",
+            "title": "",
+            "text": "<p>1011 South Congress Avenue, Suite 170,<br\/>Austin, TX 78704<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1642543336921b95c0-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_8.png",
+            "title": "",
+            "text": "<p>5011 Burnet Rd,<br\/>Austin, TX 78756<br\/>(512) 792-9546<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e38bf2c8-7a53-4958-b17c-992c3b2f545f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tiny_Grocer_Logo_240x240_229051ca-98d0-48b1-bd1b-c3476e92fb51.jpg",
+            "title": "Tiny Grocer",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1642543336921b95c0-1",
+        "1642543336921b95c0-2",
+        "1642543336921b95c0-0",
+        "e38bf2c8-7a53-4958-b17c-992c3b2f545f"
+      ],
+      "settings": {
+        "italicized": false,
+        "title": "Find Kimbala Around Austin...",
+        "subTitle": "",
+        "header_color": "#111111",
+        "text_align": "center",
+        "heading_size": "medium",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false,
+        "wavePageContent": false,
+        "wavySectionColor": "#f3f3f3"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1642543336916f329f"
+  ]
+}
