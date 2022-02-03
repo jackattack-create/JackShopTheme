@@ -17,9 +17,9 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Enjoy a FREE upcoming product before it launches!! Included with every order placed through 1\/30\/22",
+              "text": "FREE SHIPPING on Kimbala Intro 10 Pack - Click to Shop!",
               "color_scheme": "background-2",
-              "link": ""
+              "link": "shopify:\/\/collections\/all"
             }
           }
         },
