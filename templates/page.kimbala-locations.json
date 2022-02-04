@@ -88,10 +88,17 @@
         "wavePageContent": false,
         "wavySectionColor": "#f3f3f3"
       }
+    },
+    "16439474974c15dcb3": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "We Offer Wholesale! Tell Us About Yourself Below..."
+      }
     }
   },
   "order": [
     "main",
-    "1642543336916f329f"
+    "1642543336916f329f",
+    "16439474974c15dcb3"
   ]
 }
