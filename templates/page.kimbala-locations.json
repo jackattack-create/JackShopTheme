@@ -18,7 +18,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Royal_Blue.png",
             "title": "",
-            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<br\/>1629 E. 6TH<\/p>",
+            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<\/p><p>1629 E 6th St<\/p><p><a href=\"https:\/\/www.royalbluegrocery.com\/locations\" target=\"_blank\" title=\"Royal Blue Grocery Austin Locations\">Find a Location<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
