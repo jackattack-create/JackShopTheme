@@ -18,9 +18,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Royal_Blue.png",
             "title": "",
-            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<\/p><p>1629 E 6th St<\/p><p><a href=\"https:\/\/www.royalbluegrocery.com\/locations\" target=\"_blank\" title=\"Royal Blue Grocery Austin Locations\">Find a Location<\/a><\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<\/p><p>1629 E 6th St<\/p>",
+            "link_label": "Find a Location",
+            "link": "https:\/\/www.royalbluegrocery.com\/locations"
           }
         },
         "1642543336921b95c0-2": {
@@ -28,9 +28,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Asset_7.png",
             "title": "",
-            "text": "<p>1011 South Congress Avenue, Suite 170<\/p><p><a href=\"https:\/\/www.google.com\/maps\/place\/Two+Hands\/@30.2534769,-97.7500764,17z\/data=!3m1!4b1!4m5!3m4!1s0x8644b5e6114869ad:0xd3212aa6bddab874!8m2!3d30.2534769!4d-97.7478877\" target=\"_blank\" title=\"Google map location for Two Hands South Congress\">Find Two Hands<\/a><\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>1011 South Congress Avenue, Suite 170<\/p>",
+            "link_label": "Find Two Hands",
+            "link": "https:\/\/www.google.com\/maps\/place\/Two+Hands\/@30.2534769,-97.7500764,17z\/data=!3m1!4b1!4m5!3m4!1s0x8644b5e6114869ad:0xd3212aa6bddab874!8m2!3d30.2534769!4d-97.7478877"
           }
         },
         "1642543336921b95c0-0": {
@@ -38,9 +38,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Asset_8.png",
             "title": "",
-            "text": "<p>5011 Burnet Rd<\/p><p><a href=\"https:\/\/www.google.com\/maps\/place\/Citizen+Eatery\/@30.3216868,-97.7412279,17z\/data=!3m2!4b1!5s0x8644ca5fc8b05567:0x4f8b36582a9bd796!4m5!3m4!1s0x8644ca607e1b9929:0x1967018e843036ad!8m2!3d30.3216868!4d-97.7390392\" target=\"_blank\" title=\"Google Maps location for Citizen Eatery\">Find Citizen Eatery<\/a><\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>5011 Burnet Rd<\/p>",
+            "link_label": "Find Citizen Eatery",
+            "link": "https:\/\/www.google.com\/maps\/place\/Citizen+Eatery\/@30.3216868,-97.7412279,17z\/data=!3m2!4b1!5s0x8644ca5fc8b05567:0x4f8b36582a9bd796!4m5!3m4!1s0x8644ca607e1b9929:0x1967018e843036ad!8m2!3d30.3216868!4d-97.7390392"
           }
         },
         "e38bf2c8-7a53-4958-b17c-992c3b2f545f": {
@@ -48,9 +48,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Tiny_Grocer_Logo_240x240_229051ca-98d0-48b1-bd1b-c3476e92fb51.jpg",
             "title": "Tiny Grocer",
-            "text": "<p>1718 S Congress Ave<\/p><p><a href=\"https:\/\/tinygrocer.com\/\" target=\"_blank\" title=\"Kimbala Chai Assamica at Tiny Grocer Austin\">Find Tiny Grocer<\/a><\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>1718 S Congress Ave<\/p>",
+            "link_label": "Find Tiny Grocer",
+            "link": "https:\/\/tinygrocer.com\/"
           }
         },
         "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd": {
