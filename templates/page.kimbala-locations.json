@@ -55,10 +55,37 @@
         },
         "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Thoms_Logo_f84eb9c4-6b9f-4f16-839e-ec5037c6db6c.jpg",
+            "title": "",
+            "text": "<p>1418 Barton Springs Rd<\/p><p>160 E Riverside Dr<\/p><p>5901 Burnet Rd<\/p>",
+            "link_label": "Find a Location",
+            "link": "https:\/\/www.thomsmarket.com\/"
+          }
+        },
+        "d83deb48-ed32-4a9b-959f-21cadfe62044": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ea01e191-19ff-4860-aca5-47dfb06e3087": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "fc3133b6-97a5-419a-a551-4b67ac4b27eb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -69,7 +96,10 @@
         "1642543336921b95c0-2",
         "1642543336921b95c0-0",
         "e38bf2c8-7a53-4958-b17c-992c3b2f545f",
-        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd"
+        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd",
+        "d83deb48-ed32-4a9b-959f-21cadfe62044",
+        "ea01e191-19ff-4860-aca5-47dfb06e3087",
+        "fc3133b6-97a5-419a-a551-4b67ac4b27eb"
       ],
       "settings": {
         "italicized": false,
