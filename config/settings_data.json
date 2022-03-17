@@ -75,13 +75,19 @@
               "heading": "",
               "subtext": "<p><a href=\"sms:510-502-5904\">(510) 502-5904<\/a><\/p>"
             }
+          },
+          "891763cd-9c5b-47d4-9767-e9892072dd46": {
+            "type": "social_media",
+            "settings": {
+            }
           }
         },
         "block_order": [
           "4ff4feca-b75c-42a6-b794-335403769991",
           "760b3bbf-8cb3-4246-8f72-94e951a7b013",
           "footer-0",
-          "0c216f5b-169c-49c6-b35c-938fdc9fceb4"
+          "0c216f5b-169c-49c6-b35c-938fdc9fceb4",
+          "891763cd-9c5b-47d4-9767-e9892072dd46"
         ],
         "settings": {
           "color_scheme": "accent-1",
