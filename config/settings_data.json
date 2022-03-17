@@ -10,6 +10,9 @@
     "type_header_font": "fira_sans_n7",
     "heading_scale": 110,
     "type_body_font": "ibm_plex_sans_n4",
+    "social_twitter_link": "https:\/\/twitter.com\/i_kimbala",
+    "social_facebook_link": "https:\/\/facebook.com\/ikimbala",
+    "social_instagram_link": "http:\/\/instagram.com\/i_kimbala",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -84,7 +87,7 @@
           "color_scheme": "accent-1",
           "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
+          "show_social": true,
           "enable_country_selector": true,
           "enable_language_selector": true,
           "payment_enable": true
