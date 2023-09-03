@@ -18,7 +18,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Royal_Blue.png",
             "title": "",
-            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<\/p><p>1629 E 6th St<\/p>",
+            "text": "<p>6th & Congress<br\/>3rd & Brazos<br\/>3rd & Lavaca<br\/>4th & Nueces<br\/>Rainey Street<\/p><p>1629 E 6th St<\/p><p>91 Red River<\/p>",
             "link_label": "Find a Location",
             "link": "https:\/\/www.royalbluegrocery.com\/locations"
           }
@@ -28,9 +28,29 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Asset_7.png",
             "title": "",
-            "text": "<p>1011 South Congress Avenue, Suite 170<\/p>",
-            "link_label": "Find Two Hands",
-            "link": "https:\/\/www.google.com\/maps\/place\/Two+Hands\/@30.2534769,-97.7500764,17z\/data=!3m1!4b1!4m5!3m4!1s0x8644b5e6114869ad:0xd3212aa6bddab874!8m2!3d30.2534769!4d-97.7478877"
+            "text": "<p>1011 South Congress Avenue, Suite 170<br\/><br\/>606 8th Ave South<br\/>Nashville, Tennessee<\/p>",
+            "link_label": "Visit Two Hands",
+            "link": "https:\/\/www.twohandshospitality.com\/"
+          }
+        },
+        "d83deb48-ed32-4a9b-959f-21cadfe62044": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medici_logo.png",
+            "title": "",
+            "text": "<p>Springdale <br\/>West Lynn<br\/>Guadalupe <br\/>South Lamar<br\/>Domain<\/p>",
+            "link_label": "Visit Caffe Medici",
+            "link": "https:\/\/mediciroasting.com\/"
+          }
+        },
+        "ea01e191-19ff-4860-aca5-47dfb06e3087": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/central_market_logo.png",
+            "title": "",
+            "text": "<p>Austin North Lamar<br\/>Austin Westgate<br\/>Dallas Lovers Lane<br\/>Dallas Midway<br\/>Dallas Preston Royal<br\/>Fort Worth<br\/>Houston<br\/>Plano<br\/>San Antonio<br\/>Southlake<\/p>",
+            "link_label": "Find a Location",
+            "link": "https:\/\/www.centralmarket.com\/locations"
           }
         },
         "1642543336921b95c0-0": {
@@ -39,18 +59,8 @@
             "image": "shopify:\/\/shop_images\/Asset_8.png",
             "title": "",
             "text": "<p>5011 Burnet Rd<\/p>",
-            "link_label": "Find Citizen Eatery",
+            "link_label": "Visit Citizen Eatery",
             "link": "https:\/\/www.google.com\/maps\/place\/Citizen+Eatery\/@30.3216868,-97.7412279,17z\/data=!3m2!4b1!5s0x8644ca5fc8b05567:0x4f8b36582a9bd796!4m5!3m4!1s0x8644ca607e1b9929:0x1967018e843036ad!8m2!3d30.3216868!4d-97.7390392"
-          }
-        },
-        "e38bf2c8-7a53-4958-b17c-992c3b2f545f": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Tiny_Grocer_Logo_240x240_229051ca-98d0-48b1-bd1b-c3476e92fb51.jpg",
-            "title": "Tiny Grocer",
-            "text": "<p>1718 S Congress Ave<\/p>",
-            "link_label": "Find Tiny Grocer",
-            "link": "https:\/\/tinygrocer.com\/"
           }
         },
         "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd": {
@@ -58,30 +68,61 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Thoms_Logo_f84eb9c4-6b9f-4f16-839e-ec5037c6db6c.jpg",
             "title": "",
-            "text": "<p>1418 Barton Springs Rd<\/p><p>160 E Riverside Dr<\/p><p>5901 Burnet Rd<\/p>",
+            "text": "<p>1418 Barton Springs Rd<\/p><p>160 E Riverside Dr<\/p><p>5901 Burnet Rd<\/p><p><\/p>",
             "link_label": "Find a Location",
             "link": "https:\/\/www.thomsmarket.com\/"
           }
         },
-        "d83deb48-ed32-4a9b-959f-21cadfe62044": {
+        "e38bf2c8-7a53-4958-b17c-992c3b2f545f": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/burnet_go_to_logo.jpg",
             "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "ea01e191-19ff-4860-aca5-47dfb06e3087": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "text": "<p>6800 Burnet Rd<\/p>",
+            "link_label": "Visit Burnet Go To",
+            "link": "https:\/\/burnetgoto.com\/"
           }
         },
         "fc3133b6-97a5-419a-a551-4b67ac4b27eb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DAF_Austin.jpg",
+            "title": "",
+            "text": "<p>5003 Airport Blvd<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ccc86d93-ad5f-4c04-9cb4-9439da768774": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aman_logo.png",
+            "title": "",
+            "text": "<p>1 Kayenta Rd<br\/>Canyon Point, Utah<\/p>",
+            "link_label": "Visit Amangiri",
+            "link": "https:\/\/www.aman.com\/resorts\/amangiri"
+          }
+        },
+        "e7de9f67-21ac-4cb8-8fb4-23d488576a8c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ao_co_logo.jpg",
+            "title": "",
+            "text": "<p>1641 Tower Grove Avenue<br\/>Saint Louis, Missouri <\/p>",
+            "link_label": "Visit AO&Co",
+            "link": "https:\/\/bengelina.com\/aoco"
+          }
+        },
+        "28c0b52b-fbe7-4434-bce3-4c4877384e03": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d": {
           "type": "column",
           "settings": {
             "title": "",
@@ -94,16 +135,20 @@
       "block_order": [
         "1642543336921b95c0-1",
         "1642543336921b95c0-2",
-        "1642543336921b95c0-0",
-        "e38bf2c8-7a53-4958-b17c-992c3b2f545f",
-        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd",
         "d83deb48-ed32-4a9b-959f-21cadfe62044",
         "ea01e191-19ff-4860-aca5-47dfb06e3087",
-        "fc3133b6-97a5-419a-a551-4b67ac4b27eb"
+        "1642543336921b95c0-0",
+        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd",
+        "e38bf2c8-7a53-4958-b17c-992c3b2f545f",
+        "fc3133b6-97a5-419a-a551-4b67ac4b27eb",
+        "ccc86d93-ad5f-4c04-9cb4-9439da768774",
+        "e7de9f67-21ac-4cb8-8fb4-23d488576a8c",
+        "28c0b52b-fbe7-4434-bce3-4c4877384e03",
+        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d"
       ],
       "settings": {
         "italicized": false,
-        "title": "Find Kimbala Around Austin...",
+        "title": "Find Kimbala Around Austin & Beyond...",
         "subTitle": "",
         "header_color": "#111111",
         "text_align": "center",
