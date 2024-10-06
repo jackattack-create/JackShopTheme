@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "colors_solid_button_labels": "#FFFFFF",
@@ -10,25 +19,12 @@
     "type_header_font": "fira_sans_n7",
     "heading_scale": 110,
     "type_body_font": "ibm_plex_sans_n4",
-    "social_twitter_link": "https:\/\/twitter.com\/i_kimbala",
-    "social_facebook_link": "https:\/\/facebook.com\/ikimbala",
-    "social_instagram_link": "http:\/\/instagram.com\/i_kimbala",
+    "social_twitter_link": "https://twitter.com/i_kimbala",
+    "social_facebook_link": "https://facebook.com/ikimbala",
+    "social_instagram_link": "http://instagram.com/i_kimbala",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "FREE SHIPPING on Kimbala Intro 10 Pack - Click to Shop!",
-              "color_scheme": "background-2",
-              "link": "shopify:\/\/collections\/all"
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
         "settings": {
         }
       },
@@ -36,7 +32,7 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-2",
-          "logo": "shopify:\/\/shop_images\/Kimbala_logo.png",
+          "logo": "shopify://shop_images/Kimbala_logo.png",
           "logo_width": 100,
           "logo_position": "middle-left",
           "menu": "header-menu",
@@ -50,7 +46,7 @@
           "4ff4feca-b75c-42a6-b794-335403769991": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Kimbala_logo_semicolon.png",
+              "image": "shopify://shop_images/Kimbala_logo_semicolon.png",
               "image_width": 50,
               "alignment": ""
             }
@@ -73,7 +69,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<p><a href=\"sms:510-502-5904\">(510) 502-5904<\/a><\/p>"
+              "subtext": "<p><a href=\"sms:510-502-5904\">(510) 502-5904</a></p>"
             }
           },
           "891763cd-9c5b-47d4-9767-e9892072dd46": {
@@ -105,26 +101,26 @@
     ],
     "blocks": {
       "uppromote-affiliate-referral-customer-referral-48447-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
-        "type": "shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/customer-referral\/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/customer-referral/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
         "disabled": true,
         "settings": {
         }
       },
       "uppromote-affiliate-referral-message-bar-48447-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
-        "type": "shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/message-bar\/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/message-bar/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
         "disabled": true,
         "settings": {
         }
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
           "button_color": "#e6dfdf",
           "button_icon": "chat_bubble",
+          "button_text": "no_text",
           "button_horizontal_position": "bottom_left",
           "button_vertical_position": "lowest",
-          "button_text": "no_text",
           "greeting_message": "👋 Hello! Let me know if you have a specific question or if I can make a recommendation. Look forward to chatting!"
         }
       }
