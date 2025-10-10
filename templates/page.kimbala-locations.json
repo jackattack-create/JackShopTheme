@@ -135,10 +135,31 @@
         "column_NjyVXn": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/Lau_Lau_logo.png",
+            "title": "",
+            "text": "<p>3701 Guadalupe St</p>",
+            "link_label": "Visit Lau Lau",
+            "link": "https://www.google.com/maps/place/Lau+Lau/@30.3018956,-97.7407106,17z/data=!3m1!4b1!4m6!3m5!1s0x8644cbe30004a171:0x7170c7180bd26aab!8m2!3d30.3018956!4d-97.7381357!16s%2Fg%2F11yfngjkpg?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "column_NUdxJ3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/noble_joe_logo.jpg",
+            "title": "",
+            "text": "<p>511 Industrial Blvd </p><p>1620 E Riverside Dr @ Southshore Eatery Food Truck Park</p>",
+            "link_label": "Visit Noble Joe",
+            "link": "https://www.google.com/maps/search/Noble+Joe+Coffee+Co.+locations/@30.2452671,-97.7495607,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/parker_and_scott_logo.jpg",
+            "title": "",
+            "text": "<p>2113 W Anderson Ln, Ste B</p>",
+            "link_label": "Visit Parker + Scott",
+            "link": "https://www.google.com/maps/place/Parker+and+Scott/@30.3547591,-97.7314022,17z/data=!3m1!4b1!4m6!3m5!1s0x8644cb6dc515ff0f:0x9fa3a4590c547832!8m2!3d30.3547591!4d-97.7288273!16s%2Fg%2F11rkp9f35c?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
           }
         },
         "ccc86d93-ad5f-4c04-9cb4-9439da768774": {
@@ -160,24 +181,6 @@
             "link_label": "Visit AO&Co",
             "link": "https://bengelina.com/aoco"
           }
-        },
-        "28c0b52b-fbe7-4434-bce3-4c4877384e03": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -193,10 +196,10 @@
         "column_rMeAzE",
         "column_kQfAWR",
         "column_NjyVXn",
+        "column_NUdxJ3",
+        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d",
         "ccc86d93-ad5f-4c04-9cb4-9439da768774",
-        "e7de9f67-21ac-4cb8-8fb4-23d488576a8c",
-        "28c0b52b-fbe7-4434-bce3-4c4877384e03",
-        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d"
+        "e7de9f67-21ac-4cb8-8fb4-23d488576a8c"
       ],
       "settings": {
         "italicized": false,
