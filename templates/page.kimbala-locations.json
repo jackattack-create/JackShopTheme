@@ -62,26 +62,6 @@
             "link": "https://www.centralmarket.com/locations"
           }
         },
-        "1642543336921b95c0-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Fleet_logo.jpg",
-            "title": "",
-            "text": "<p>2427 Webberville Rd</p><p>804 Congress Ave</p><p>2806 Manor Rd</p>",
-            "link_label": "Visit Fleet",
-            "link": "https://www.google.com/maps/search/fleet+coffee+austin/@30.2742304,-97.7372697,15z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
-          }
-        },
-        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/DOXA_Logo.jpg",
-            "title": "",
-            "text": "<p>11300 Old San Antonio Rd</p><p>1710 N FM 1626, Buda</p><p></p>",
-            "link_label": "Visit DOXA",
-            "link": "https://www.google.com/maps/place/Doxa+Coffee+Roasters/@30.1409665,-97.8057039,16z/data=!3m1!4b1!4m6!3m5!1s0x865b4dcad739e53f:0xc56bf30f5e268d74!8m2!3d30.1409665!4d-97.803129!16s%2Fg%2F11ssxf343z?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
-          }
-        },
         "column_FjTPgV": {
           "type": "column",
           "settings": {
@@ -142,26 +122,6 @@
             "link": "https://www.google.com/maps/place/Lau+Lau/@30.3018956,-97.7407106,17z/data=!3m1!4b1!4m6!3m5!1s0x8644cbe30004a171:0x7170c7180bd26aab!8m2!3d30.3018956!4d-97.7381357!16s%2Fg%2F11yfngjkpg?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
           }
         },
-        "column_NUdxJ3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/noble_joe_logo.jpg",
-            "title": "",
-            "text": "<p>511 Industrial Blvd </p><p>1620 E Riverside Dr @ Southshore Eatery Food Truck Park</p>",
-            "link_label": "Visit Noble Joe",
-            "link": "https://www.google.com/maps/search/Noble+Joe+Coffee+Co.+locations/@30.2452671,-97.7495607,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
-          }
-        },
-        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/parker_and_scott_logo.jpg",
-            "title": "",
-            "text": "<p>2113 W Anderson Ln, Ste B</p>",
-            "link_label": "Visit Parker + Scott",
-            "link": "https://www.google.com/maps/place/Parker+and+Scott/@30.3547591,-97.7314022,17z/data=!3m1!4b1!4m6!3m5!1s0x8644cb6dc515ff0f:0x9fa3a4590c547832!8m2!3d30.3547591!4d-97.7288273!16s%2Fg%2F11rkp9f35c?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
-          }
-        },
         "ccc86d93-ad5f-4c04-9cb4-9439da768774": {
           "type": "column",
           "settings": {
@@ -188,16 +148,12 @@
         "1642543336921b95c0-2",
         "d83deb48-ed32-4a9b-959f-21cadfe62044",
         "ea01e191-19ff-4860-aca5-47dfb06e3087",
-        "1642543336921b95c0-0",
-        "f0f4b8b3-6378-46c0-94ed-5cc2e9a45ffd",
         "column_FjTPgV",
         "e38bf2c8-7a53-4958-b17c-992c3b2f545f",
         "fc3133b6-97a5-419a-a551-4b67ac4b27eb",
         "column_rMeAzE",
         "column_kQfAWR",
         "column_NjyVXn",
-        "column_NUdxJ3",
-        "d0c62c9c-5cff-4c2a-8cad-ed2d18ddf84d",
         "ccc86d93-ad5f-4c04-9cb4-9439da768774",
         "e7de9f67-21ac-4cb8-8fb4-23d488576a8c"
       ],
