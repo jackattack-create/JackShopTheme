@@ -25,19 +25,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement_Q8tkMY": {
-            "type": "announcement",
-            "settings": {
-              "text": "Next Ship Date For All Orders - 12/29/25",
-              "color_scheme": "accent-2",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "announcement_Q8tkMY"
-        ],
         "settings": {}
       },
       "header": {
