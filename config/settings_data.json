@@ -25,6 +25,19 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "announcement_46UYh3": {
+            "type": "announcement",
+            "settings": {
+              "text": "All items will return soon, thanks for your patience while we restock!",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement_46UYh3"
+        ],
         "settings": {}
       },
       "header": {
